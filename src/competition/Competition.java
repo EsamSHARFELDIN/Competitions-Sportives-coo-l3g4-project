@@ -5,21 +5,17 @@ package competition;
 
 import java.util.List;
 
-import competitor.Competitor;
-import match.Match;
-
 /**
  * @author adama
  *
  */
 public abstract class Competition {
-	protected Match match;
+	private Match match;
 	private final List<Competitor> competitors;
 	
 
 
-	public Competition(Match match,List<Competitor> competitors) {
-		this.match= match;
+	public Competition(List<Competitor> competitors) {
 		this.competitors = competitors;
 	}
 
@@ -38,5 +34,12 @@ public abstract class Competition {
 		return competitors;
 	}
 	
+	public void play() {
+		
+	}	
+	
+	public void ranking () {
+		
+	}
 
 }
