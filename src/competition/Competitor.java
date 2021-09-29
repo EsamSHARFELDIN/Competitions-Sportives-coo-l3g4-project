@@ -4,6 +4,7 @@
 package competition;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author traorea
@@ -16,7 +17,7 @@ public class Competitor implements Comparable<Competitor> {
 	private int win = 0;		//number of wins
 	private int loss = 0;		//number of losses
 	private int points;
-	public ArrayList<Competitor>  list= new ArrayList<Competitor>();
+	public List<Competitor>  list= new ArrayList<Competitor>();
 	
 	public  Competitor (String name) {
 		this.name=name;

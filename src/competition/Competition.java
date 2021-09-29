@@ -35,11 +35,5 @@ public abstract class Competition {
 	protected  abstract List<Competitor> play(List<Competitor> competitors);
 	
 	
-	protected void playMatch(Competitor c1,Competitor c2) {
-		
-	}
-	
-	
-	
 	
 }
