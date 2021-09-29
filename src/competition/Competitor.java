@@ -46,6 +46,7 @@ public class Competitor implements Comparable<Competitor> {
 	public int getLoss() {
 		return loss;
 	}
+	
 	/**
 	 * @param loss the loss to set
 	 */

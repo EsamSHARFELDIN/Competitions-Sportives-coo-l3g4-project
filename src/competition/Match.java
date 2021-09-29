@@ -9,9 +9,10 @@ public class Match {
 	public Match(Competitor c1, Competitor c2) {	
 		this.c1 = c1;
 		this.c2 = c2;
+		
 	}
 	
-	public Competitor  setResults(int c) {		
+	/*public Competitor  setResults(int c) {		
 		if (c1.getName().equals("bye"))		
 			c = 0;					
 		else if (c2.getName().equals("bye"))	
@@ -29,7 +30,7 @@ public class Match {
 			c1.addLoss();
 		}
 		return winner;		
-	}
+	}*/
 	
 	public Competitor getWinner() {	
 		return winner;
