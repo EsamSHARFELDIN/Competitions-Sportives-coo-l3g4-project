@@ -3,34 +3,37 @@
  */
 package competition;
 
-import java.util.ArrayList;
-import java.util.List;
+import competitor.Competitor;
 
 /**
- * @author traorea
+ * @author adama
  *
  */
 public class CompetitionMain {
 
-	
 	/**
 	 * @param args
 	 */
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		List<String> list1 = new ArrayList<String>();
 		
-		list1.add("Blastoff");
-		list1.add("Drift");
-		list1.add("Lynx");
-		list1.add("Catalyst");
-		list1.add("Raven");
-		list1.add("Midas");
+		Competitor c1= new Competitor("Lynx");
+		Competitor c2= new Competitor("Midas");
+		Competitor c3= new Competitor("Drift");
+		Competitor c4= new Competitor("Catalyst");
+		Competitor c5= new Competitor("Raven");
+		Competitor c6= new Competitor("Blastoff");
+		Competition competition = new Competitions ("round_1");
+		competition.addCompetitor(c1);
+		competition.addCompetitor(c2);
+		competition.addCompetitor(c3);
+		competition.addCompetitor(c4);
+		competition.addCompetitor(c5);
+		competition.addCompetitor(c6);
 		
-		System.out.println("la  liste des competiteurs : " + list1);
 		
 		
-
+		System.out.println("\n     " + competition.toString());
+		
 	}
 
 }
