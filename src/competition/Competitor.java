@@ -1,5 +1,5 @@
 package competition;
 
-public class competitor {
+public class Competitor {
 		 
 }
