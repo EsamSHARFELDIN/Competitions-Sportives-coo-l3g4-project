@@ -26,7 +26,7 @@ public abstract class Match {
 	public void addScore (int score) {
 		this.setScore(this.getScore()+1);
 	}
-	protected Competitor playMatch(Competitor c1,Competitor c2) {
+	public Competitor playMatch(Competitor c1,Competitor c2) {
 		Competitor[] competitors = {c1,c2};
 		Competitor winner = competitors[new Random().nextInt(competitors.length)];
 		return winner;

@@ -4,6 +4,8 @@
 package competition;
 
 import competitor.Competitor;
+import match.Match;
+import match.Matchs;
 
 /**
  * @author adama
@@ -29,9 +31,9 @@ public class CompetitionMain {
 		competition.addCompetitor(c4);
 		competition.addCompetitor(c5);
 		competition.addCompetitor(c6);
-		
-		
-		
+		Match match = new Matchs (c1,c2);
+		match.playMatch(c1, c2);
+		System.out.println("\n   "+ match.toString());
 		System.out.println("\n     " + competition.toString());
 		
 	}

@@ -20,6 +20,9 @@ public abstract class Competition {
 	
 
 	public void play() {
+		for (Competitor c : competitors) {
+			c.playMatch(c1,c2);
+		}
 	}
 	
 	/**
