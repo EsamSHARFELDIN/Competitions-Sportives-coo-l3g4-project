@@ -4,16 +4,25 @@ import java.util.List;
 
 
 /**
+ * 
+ * Tournament class
+ * 
+ * 
  * @author traorea
  *
  */
 public class Tournament extends Competition{
+	
+	/**
+	 * Constructor for Tournament
+	 * @param competitorList
+	 */
 
     public Tournament(List<Competitor> competitorList) {
         super(competitorList);
     }
 
-    
+    @Override
     protected void play(List<Competitor> competitorList) throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException{
         if(competitorList.isEmpty())
             throw new EmptyCompetitorListException("competitor's list should not be empty");
@@ -37,12 +46,18 @@ public class Tournament extends Competition{
             throw new ListSizeIsNotPowerOfTwoException("competitor's list size should be power of 2");
         }
     }
-
+/**
+ * return true if list of competitors is power of 2, false else
+ * 
+ */
    
     public boolean isPowerOfTwo(List<Competitor>competitorList){
         return (((float)competitorList.size()/2)%2)==0.0;
     }
-   
+   /**
+    * 
+    * classification
+    */
     public void classification(){
         this.competitorList.forEach(competitor -> {
             this.competitors.put(competitor, competitor.getPoints());

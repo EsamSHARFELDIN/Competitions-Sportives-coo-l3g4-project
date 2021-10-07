@@ -1,6 +1,9 @@
 package competitionTest;
 
-
+/**
+ * @author adama
+ *
+ */
 import org.junit.Before;
 import org.junit.Test;
 
@@ -8,6 +11,7 @@ import competition.Competitor;
 import competition.MatchRandom;
 
 import static org.junit.Assert.assertEquals;
+
 
 public class MatchRandomTest {
     private Competitor competitor1;
