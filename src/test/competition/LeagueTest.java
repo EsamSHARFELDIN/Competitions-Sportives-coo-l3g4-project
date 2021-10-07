@@ -1,16 +1,11 @@
-package test;
+package competition;
+
 import java.util.List;
 
-import competition.Competition;
-import competition.Competitor;
+public class LeagueTest extends CompetitionTest{
 
-	
-
-	public class LeagueTest extends CompetitionTest{
-
-	    @Override
-	    protected Competition createCompetition(List<Competitor>competitors) {
-	        return new League(competitors);
-	    }
-
+    @Override
+    protected Competition createCompetition(List<Competitor>competitors) {
+        return new League(competitors);
+    }
 }

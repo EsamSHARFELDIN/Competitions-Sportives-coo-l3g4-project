@@ -3,9 +3,8 @@ package competition;
 import java.util.*;
 
 
-
 public class CompetitionMain {
-    public static void play(Competition  competition){
+    public static void play(Competition competition){
         try{
             competition.play();
             System.out.println("**** Ranking ****");
@@ -19,7 +18,7 @@ public class CompetitionMain {
             System.out.println(except.getMessage());
         }
     }
-   
+ 
     public static void main(String []args){
         Competition competition;
         List<Competitor> competitorList = new ArrayList<>();

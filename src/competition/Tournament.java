@@ -2,13 +2,14 @@ package competition;
 
 import java.util.List;
 
-public class Tournament extends Competition {
 
-  
+public class Tournament extends Competition{
+
     public Tournament(List<Competitor> competitorList) {
         super(competitorList);
     }
 
+    
     protected void play(List<Competitor> competitorList) throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException{
         if(competitorList.isEmpty())
             throw new EmptyCompetitorListException("competitor's list should not be empty");
@@ -33,11 +34,12 @@ public class Tournament extends Competition {
         }
     }
 
-    
+   
     public boolean isPowerOfTwo(List<Competitor>competitorList){
         return (((float)competitorList.size()/2)%2)==0.0;
     }
- public void classification(){
+   
+    public void classification(){
         this.competitorList.forEach(competitor -> {
             this.competitors.put(competitor, competitor.getPoints());
         });
