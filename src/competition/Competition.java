@@ -5,6 +5,12 @@ import java.util.*;
 import static util.MapUtil.sortByDescendingValue;
 
 
+/**
+ * @author traorea
+ *
+ */
+
+
 public abstract class Competition {
     protected Match match;
     protected List<Competitor>competitorList;
@@ -29,22 +35,36 @@ public abstract class Competition {
         displayWinner(competitor1, competitor2);
     }
 
+    /**
+     * @return
+     */
     public Map<Competitor, Integer> ranking(){
         return sortByDescendingValue(this.competitors);
     }
 
     
+    /**
+     * @param c1
+     * @param c2
+     */
     private void displayWinner(Competitor c1, Competitor c2){
         if(c1.getPoints() > c2.getPoints())
             System.out.println(  c1.toString()+" vs "+c2.getPseudo()+ " ---> "+c1.getPseudo()+" wins!  🏆");
             
         else
-            System.out.println( c1.toString()+" vs "+c2.getPseudo()+ " ---> "+c2.getPseudo()+" wins!   🏆");
+            System.out.println(c1.toString()+" vs "+c2.getPseudo()+ " ---> "+c2.getPseudo()+" wins!   🏆");
     }
 
+    /**
+     * 
+     */
     public abstract void classification();
 
 
    
+    /**
+     * @param competitorsList
+     * @return
+     */
     public abstract boolean isPowerOfTwo(List<Competitor>competitorsList);
 }

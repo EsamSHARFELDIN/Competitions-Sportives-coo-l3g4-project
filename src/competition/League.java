@@ -3,6 +3,10 @@ package competition;
 import java.util.List;
 
 
+/**
+ * @author traorea
+ *
+ */
 public class League extends Competition{
 
   

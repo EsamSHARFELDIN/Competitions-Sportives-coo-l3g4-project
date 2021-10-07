@@ -3,6 +3,10 @@ package competition;
 import java.util.Random;
 
 
+/**
+ * @author traorea
+ *
+ */
 public class MatchRandom implements Match{
   
     public MatchRandom(){}
