@@ -1,8 +1,8 @@
 package competition;
 
-import java.util.*;
-
 import static util.MapUtil.sortByDescendingValue;
+
+import java.util.*;
 
 
 /**
@@ -22,7 +22,7 @@ public abstract class Competition {
         this.match = new MatchRandom();
     }
 
-    void play() throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException {
+    public void play() throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException {
         play(this.competitorList);
     }
 

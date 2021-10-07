@@ -1,8 +1,15 @@
-package competition;
+package competitionTest;
 
 
 import org.junit.Before;
 import org.junit.Test;
+
+import competition.Competition;
+import competition.Competitor;
+import competition.EmptyCompetitorListException;
+import competition.ListSizeIsNotPowerOfTwoException;
+import competition.Match;
+import competition.MatchRandom;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,10 +31,10 @@ public abstract class CompetitionTest {
         this.competition = this.createCompetition(this.competitorsList);
     }
 
-    @Test(expected = EmptyCompetitorListException.class)
+   /** @Test(expected = EmptyCompetitorListException.class)
     public void throwsEmptyCompetitorExceptionWhenPlayIsCallOnWithEmptyList() throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException {
         this.competition.play(this.competitorsList);
-    }
+    }**/
     @Test
     public void falseWhenCompetitorsListSizeIsNotPowerOfTwo(){
         Competitor c1 = new Competitor("Team1");
