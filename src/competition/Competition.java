@@ -36,9 +36,10 @@ public abstract class Competition {
     
     private void displayWinner(Competitor c1, Competitor c2){
         if(c1.getPoints() > c2.getPoints())
-            System.out.println(c1.toString()+" vs "+c2.getPseudo()+ " ---> "+c1.getPseudo()+" wins !  🏆");
+            System.out.println(  c1.toString()+" vs "+c2.getPseudo()+ " ---> "+c1.getPseudo()+" wins!  🏆");
+            
         else
-            System.out.println(c1.toString()+" vs "+c2.getPseudo()+ " ---> "+c2.getPseudo()+" wins!   🏆");
+            System.out.println( c1.toString()+" vs "+c2.getPseudo()+ " ---> "+c2.getPseudo()+" wins!   🏆");
     }
 
     public abstract void classification();
