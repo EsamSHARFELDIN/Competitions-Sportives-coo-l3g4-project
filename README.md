@@ -56,6 +56,12 @@
 
 Ouvrir le fichier index.html puis pacourir tous les fichiers.
 
+
+## Compilatition des tests
+
+pour la compilation des classes de tests il fallait installer la version recente jdk.
+j'ai essayé de l'installer sur ma machine personnelle ainsi que sur les ordinateurs de M5 mais à chaque fois j'ai des erreurs mais parcontre sur eclipse les tests passent sans erreur.
+
 ## Lancer le jeu
 
 Placez vous dans le dossier
@@ -63,7 +69,12 @@ Placez vous dans le dossier
 
 puis pour lancer, faites la commande :
 
-`java -jar competition.jar  L Lynx Raven Drift Catalyst Midas Blastoff ` ou `java -jar competition.jar  T Lynx Raven Drift Catalyst Midas Blastoff `
+
+pour la league : `java -jar competition.jar  L Lynx Raven Drift Catalyst Midas Blastoff `  
+
+                    ou 
+
+pour le tournament: `java -jar competition.jar  T Lynx Raven Drift Catalyst Midas Blastoff  Etoile Olympique`
 
 ## Element de code:
   Mise en pratique des principes SOLID, notemment l'open close principle sur les types de compétitions et les types match. Mise en pratique du TDD (Test Drive Development).
