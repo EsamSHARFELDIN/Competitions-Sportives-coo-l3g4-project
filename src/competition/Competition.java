@@ -20,8 +20,8 @@ public abstract class Competition {
 
     
     /**
-     * construction for competition
-     * @param competitorList
+     *construction for competition
+     *
      */
     public Competition(List<Competitor> competitorList) {
         this.competitorList = competitorList;
@@ -29,7 +29,7 @@ public abstract class Competition {
     }
     /**
      * start the competition
-     * @throws competition.EmptyCompetitorListException -if competition's list size is empty
+     *
      */
     public void play() throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException {
         play(this.competitorList);
