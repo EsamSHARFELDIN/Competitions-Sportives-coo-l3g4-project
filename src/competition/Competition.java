@@ -23,6 +23,7 @@ public abstract class Competition {
      *construction for competition
      * @param competitorList
      */
+    
     public Competition(List<Competitor> competitorList) {
         this.competitorList = competitorList;
         this.match = new MatchRandom();

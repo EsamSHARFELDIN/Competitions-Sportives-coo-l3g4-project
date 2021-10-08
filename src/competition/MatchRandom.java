@@ -19,8 +19,8 @@ public class MatchRandom implements Match {
 
 	
 	/**
-	 * @param competitor 1
-	 * @param competitor 2
+	 * @param competitor1
+	 * @param competitor2
 	 * return winner
 	 * 
 	 *
