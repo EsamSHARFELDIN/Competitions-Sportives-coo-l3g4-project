@@ -14,7 +14,6 @@ import java.util.*;
 
 
 public abstract class Competition {
-	
     protected Match match;
     protected List<Competitor>competitorList;
     protected Map<Competitor, Integer>competitors = new HashMap<>();
@@ -24,6 +23,7 @@ public abstract class Competition {
      *construction for competition
      * @param competitorList
      */
+    
     
     public Competition(List<Competitor> competitorList) {
         this.competitorList = competitorList;

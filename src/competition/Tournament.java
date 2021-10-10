@@ -12,7 +12,6 @@ import java.util.List;
  *
  */
 public class Tournament extends Competition{
-	
 	/**
 	 * Constructor for Tournament
 	 * @param competitorList

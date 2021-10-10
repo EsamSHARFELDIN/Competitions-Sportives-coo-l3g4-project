@@ -15,5 +15,4 @@ public class TournamentTest extends CompetitionTest{
     protected Competition createCompetition(List<Competitor> competitorsList) {
         return new Tournament(competitorsList);
     }
-
 }

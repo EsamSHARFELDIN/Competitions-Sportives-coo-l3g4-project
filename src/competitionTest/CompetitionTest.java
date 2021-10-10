@@ -37,11 +37,6 @@ public abstract class CompetitionTest {
         this.match = new MatchRandom();
         this.competition = this.createCompetition(this.competitorsList);
     }
-
-    /*@Test(expected = EmptyCompetitorListException.class)
-    public void throwsEmptyCompetitorExceptionWhenPlayIsCallOnWithEmptyList() throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException {
-        this.competition.play(this.competitorsList);
-    }*/
     @Test
     public void falseWhenCompetitorsListSizeIsNotPowerOfTwo(){
         Competitor c1 = new Competitor("Team1");

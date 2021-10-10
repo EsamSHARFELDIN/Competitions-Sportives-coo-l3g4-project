@@ -9,6 +9,7 @@ package competition;
 public class Competitor {
     private String pseudo;
     private int points;
+    
 
     
     /**

@@ -8,6 +8,7 @@ import java.util.*;
  *
  */
 
+
 public class CompetitionMain {
     public static void play(Competition competition){
         try{

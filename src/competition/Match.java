@@ -9,7 +9,6 @@ package competition;
  *
  */
 public interface Match {
-  
     /**
      * allows to play a match
      * @param competitor1

@@ -47,9 +47,11 @@
   ## creation du jar
 
   on se place dans 
+
   * `>>>cd cls`
 
   puis faites la commande
+  
   * `jar cvmf ../manifest-ex ../competition.jar competition/*.class util/*.class`
 
 

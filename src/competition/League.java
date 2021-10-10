@@ -10,7 +10,6 @@ import java.util.List;
  *
  */
 public class League extends Competition{
-  
     /**
      * Constructor for League
      * @param competitorList

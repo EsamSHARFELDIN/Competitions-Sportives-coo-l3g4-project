@@ -16,8 +16,6 @@ public class MatchRandom implements Match {
 	 */
   
     public MatchRandom(){}
-    
-    
     /**
 	 * @param competitor1
 	 * @param competitor2
