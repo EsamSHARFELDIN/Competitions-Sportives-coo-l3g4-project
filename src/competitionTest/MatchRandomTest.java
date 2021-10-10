@@ -24,6 +24,7 @@ public class MatchRandomTest {
         this.competitor2 = new Competitor("Team 2");
         this.matchRandom = new MatchRandom();
     }
+    
 
     @Test
     public void ifWinnerPointChangeAfterCallPlayMatch(){

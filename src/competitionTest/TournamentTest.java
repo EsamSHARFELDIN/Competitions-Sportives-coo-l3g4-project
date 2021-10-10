@@ -16,5 +16,4 @@ public class TournamentTest extends CompetitionTest{
         return new Tournament(competitorsList);
     }
 
-
 }

@@ -7,6 +7,7 @@ import java.util.*;
  * @author traorea
  *
  */
+
 public class CompetitionMain {
     public static void play(Competition competition){
         try{

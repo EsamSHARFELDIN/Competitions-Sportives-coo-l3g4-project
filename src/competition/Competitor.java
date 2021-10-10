@@ -22,6 +22,7 @@ public class Competitor {
         this.points = 0;
     }
 
+    
     /**
      * Getter for the field
      * @return pseudo

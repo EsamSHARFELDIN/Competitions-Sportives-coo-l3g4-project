@@ -27,6 +27,7 @@ public abstract class CompetitionTest {
     protected   Match match;
     protected   List<Competitor> competitorsList;
     protected Competition competition;
+    
 
     protected abstract Competition createCompetition(List<Competitor>competitorsList);
 

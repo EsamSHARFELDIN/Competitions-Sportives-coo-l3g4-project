@@ -20,6 +20,7 @@ public class Tournament extends Competition{
 
     public Tournament(List<Competitor> competitorList) {
         super(competitorList);
+        
     }
 
     @Override

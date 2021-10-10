@@ -16,4 +16,5 @@ public class LeagueTest extends CompetitionTest{
     protected Competition createCompetition(List<Competitor>competitors) {
         return new League(competitors);
     }
+    
 }

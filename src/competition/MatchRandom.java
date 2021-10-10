@@ -16,14 +16,12 @@ public class MatchRandom implements Match {
 	 */
   
     public MatchRandom(){}
-
-	
-	/**
+    
+    
+    /**
 	 * @param competitor1
 	 * @param competitor2
 	 * return winner
-	 * 
-	 *
 	 */
 	public Competitor playMatch(Competitor competitor1, Competitor competitor2) {
 	        Competitor winner;
@@ -40,5 +38,4 @@ public class MatchRandom implements Match {
 	    }
 
   
-   
 }

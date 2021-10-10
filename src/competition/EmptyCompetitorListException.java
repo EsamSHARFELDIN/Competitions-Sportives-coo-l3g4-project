@@ -9,6 +9,7 @@ package competition;
  */
 @SuppressWarnings("serial")
 public class EmptyCompetitorListException extends Exception{
+	
     
     /**
      * Constructor for EmptyCompetitorListException
