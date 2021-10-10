@@ -14,6 +14,7 @@ import java.util.*;
 
 
 public abstract class Competition {
+	
     protected Match match;
     protected List<Competitor>competitorList;
     protected Map<Competitor, Integer>competitors = new HashMap<>();

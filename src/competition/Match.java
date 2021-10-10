@@ -15,6 +15,7 @@ public interface Match {
      * @param competitor1
      * @param competitor2
      * @return a Competitor
+     * 
      */
     Competitor playMatch(Competitor competitor1, Competitor competitor2);
 }
