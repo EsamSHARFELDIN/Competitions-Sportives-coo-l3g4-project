@@ -1,10 +1,12 @@
-package competition;
+package test;
 
 
 
 
 import org.junit.Before;
 import org.junit.Test;
+
+import main.*;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package competition;
+package main;
 
 
 public interface Match {

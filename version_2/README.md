@@ -31,7 +31,7 @@
   * `>>>cd adama-traore-coo-l3g4-project/version_2`
   puis pour compiler, faites la commande 
 
- *  `>>> javac -encoding utf8 -d cls -cp cls  main/competition/*.java main/util/*.java main/master/*.java `
+ *  `>>> javac -encoding utf8 -d cls -cp cls  main/*.java util/*.java  `
 
 
   ## Générer la documentation :
@@ -41,13 +41,13 @@
 
   puis pour compiler, faites la commande 
   
-  * `>>> javac  -d doc -cp doc  main/competition/*.java main/util/*.java main/master/*.java`
+  * `>>> javac  -d doc -cp doc  main/*.java util/*.java`
 
   ## compiler les tests :
   on se place dans 
   * `>>>cd adama-traore-coo-l3g4-project/version_2`
   puis pour compiler, faites la commande 
- *`>>> javac -encoding utf8 -d cls -cp cls -classpath junit-4.3.jar main/competition/*.java main/util/*.java main/master/*.java test/competition/*.java test/master/*.java`
+ * `>>> javac -encoding utf8 -d cls -cp cls -classpath junit-4.3.jar main/*.java util/*.java test/*.java`
 
   ## creation du jar
 
@@ -57,7 +57,7 @@
 
   puis faites la commande
   
-  * `jar cvmf ../manifest-ex ../master.jar competition/*.class util/*.class master/*.class`
+  * `jar cvmf ../manifest-ex ../master.jar main/*.class util/*.class test/*.class`
 
 
   ## Consulter documentation :
@@ -87,4 +87,4 @@ puis pour lancer, faites la commande :
   Pour l'exécution du projet, j'ai choisi de permettre à l'utilisateur d'entrer sur la ligne de commande le type de compétition (L ou T) ainsi que les noms des Competitors, ce qui m'a valu de faire un switch dans la fonction main, ce qui en effet ne respecte pas l'OCP.
   Pour la dernière stratégie (M32) pas la peine de saisir vu le nombre d'équipes assez conséquent donc juste le paramètre M32 puis Entrez
 ## Diagramme UML :
-![Screenshot](src/uml/diagramme.png)
+![Screenshot](../version_2/uml/diagramme.png)

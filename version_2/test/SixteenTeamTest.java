@@ -1,8 +1,8 @@
-package competition;
+package test;
 
 
-import master.SelectTeamMethodStrategy;
-import master.SixteenTeamStrategy;
+import main.*;
+
 
 import java.util.List;
 

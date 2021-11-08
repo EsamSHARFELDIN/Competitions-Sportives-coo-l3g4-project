@@ -1,9 +1,8 @@
-package competition;
+package main;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.Random;
 
 public class TwentyFourTeam extends SelectTeamMethod{
     private List<Competitor>bestThird = new ArrayList<>();

@@ -1,9 +1,11 @@
-package competition;
+package test;
 
 
 
 import org.junit.Before;
 import org.junit.Test;
+
+import main.*;
 
 import static org.junit.Assert.assertEquals;
 

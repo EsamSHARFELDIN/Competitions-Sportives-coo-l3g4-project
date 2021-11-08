@@ -1,11 +1,20 @@
-package competition;
+package main;
 
-import master.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
-import java.util.*;
 
-
+/**
+ * @author traorea
+ *
+ */
 public class CompetitionMain {
+    /**
+     * @param competition
+     */
     public static void play(Competition competition){
         try{
             competition.play();
@@ -21,10 +30,11 @@ public class CompetitionMain {
         }
     }
     /**
-     * <p>main.</p>
+     * main
      *
-     * @param args an array of {@link java.lang.String} objects.
+     * @param args .
      */
+   
     public static void main(String []args){
         Competition competition;
         SelectTeamMethodStrategy selectTeamMethod;

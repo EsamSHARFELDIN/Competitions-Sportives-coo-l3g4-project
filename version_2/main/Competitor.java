@@ -1,32 +1,46 @@
-package competition;
+package main;
 
 
+/**
+ * @author traorea
+ *
+ */
+/**
+ * @author traorea
+ *
+ */
 public class Competitor {
     private String pseudo;
     private int points;
 
+    /**
+     * @param pseudo
+     */
+    
     public Competitor(String pseudo) {
         this.pseudo = pseudo;
         this.points = 0;
     }
 
    
+    /**
+     * @return pseudo
+     */
     public String getPseudo() {
         return pseudo;
     }
 
 
     /**
-     * <p>Getter for the field <code>competitorPoint</code>.</p>
      *
-     * @return a int.
+     * @return a points.
      */
     public int getPoints() {
         return points;
     }
 
     /**
-     * <p>Setter for the field <code>competitorPoint</code>.</p>
+     * Set a competitor  points
      */
     public void setPoints() {
         this.points += 1;
@@ -35,16 +49,24 @@ public class Competitor {
     /**
      * reset the point to zero
      */
+    /**
+     * 
+     */
     public void resetPoint(){
         this.points = 0;
     }
-    /** {@inheritDoc} */
-    @Override
+  
+    /**
+     *tostring
+     */
     public String toString() {
         return this.getPseudo() + "";
     }
 
-    /** {@inheritDoc} */
+ 
+    /**
+     *return boolean
+     */
     public boolean equals(Object object){
         if(object instanceof Competitor){
             Competitor other = (Competitor)object;

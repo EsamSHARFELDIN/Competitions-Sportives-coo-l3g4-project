@@ -1,8 +1,8 @@
-package competition;
+package test;
 
 
 
-import master.SelectTeamMethodStrategy;
+import main.*;
 import org.junit.Test;
 
 import java.util.ArrayList;

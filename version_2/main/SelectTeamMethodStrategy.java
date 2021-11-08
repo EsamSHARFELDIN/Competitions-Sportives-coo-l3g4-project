@@ -1,7 +1,4 @@
-package master;
-
-import competition.Competitor;
-import competition.NumberOfCompetitorsNotAchievedException;
+package main;
 
 import java.util.ArrayList;
 import java.util.List;

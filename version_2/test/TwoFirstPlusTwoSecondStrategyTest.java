@@ -1,13 +1,12 @@
-package master;
+package test;
 
 
  
-import competition.Competitor;
-import competition.SelectTeamMethodTest;
-
 import java.util.List;
 
-import static org.junit.Assert.*;
+import main.Competitor;
+import main.SelectTeamMethodStrategy;
+import main.TwoFirstPlusTwoSecondStrategy;
 
 public class TwoFirstPlusTwoSecondStrategyTest extends SelectTeamMethodTest {
 

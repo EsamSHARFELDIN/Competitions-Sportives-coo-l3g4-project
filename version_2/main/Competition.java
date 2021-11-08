@@ -1,11 +1,12 @@
-package competition;
+package main;
 
 import java.util.*;
 
 import static util.MapUtil.sortByDescendingValue;
 
+
 /**
- * @author adama
+ * @author traorea
  *
  */
 public abstract class Competition {
@@ -68,7 +69,7 @@ public abstract class Competition {
     }
 
     /**
-     * <p>classification.</p>
+     *classification.
      */
     public abstract void classification(List<Competitor>competitorList);
 
@@ -76,8 +77,8 @@ public abstract class Competition {
     /**
      * return true if competitor's list size is power of 2, false else
      *
-     * @param competitorsList a {@link java.util.List} object.
-     * @return <code>true</code> or <code>false</code>
+     * @param competitorsList .
+     * @return true or false
      */
     public abstract boolean isPowerOfTwo(List<Competitor>competitorsList);
 }

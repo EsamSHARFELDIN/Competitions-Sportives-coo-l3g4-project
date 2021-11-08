@@ -1,12 +1,12 @@
-package competition;
+package test;
 
 
-
-import org.junit.Test;
 
 import java.util.List;
 
-import static org.junit.Assert.assertFalse;
+import main.Competition;
+import main.Competitor;
+import main.Tournament;
 
 public class TournamentTest extends CompetitionTest{
     @Override

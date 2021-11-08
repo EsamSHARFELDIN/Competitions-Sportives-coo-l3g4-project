@@ -1,6 +1,8 @@
-package competition;
+package test;
 
 import java.util.List;
+
+import main.*;
 
 public class LeagueTest extends CompetitionTest{
 

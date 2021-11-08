@@ -1,18 +1,14 @@
-package master;
-
-import competition.Competitor;
-import competition.NumberOfCompetitorsNotAchievedException;
+package main;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
 
+public class TwentyFourTeamStrategy extends SelectTeamMethodStrategy {
+    private final int NBCOMPETITOR = 24;
 
-public class TwoFirstPlusTwoSecondStrategy extends SelectTeamMethodStrategy{
-    private final int NBCOMPETITOR = 32;
-    private List<Competitor>bestSecond = new ArrayList<>();
-
+    private List<Competitor>bestThird = new ArrayList<>();
     /**
      * allows to cut the competitor's list according to the type of methode select
      *
@@ -37,16 +33,20 @@ public class TwoFirstPlusTwoSecondStrategy extends SelectTeamMethodStrategy{
 
     /**
      * allows to select the teams according an certain criteria define by each class that implement the method
-     * select the two first of each group and then select the two second
-     * @param hens            competitor's list those who just finish to play
+     * select the two first of each hens and then select the best second of each hens, then select the 2 best second in the of 3
+     * @param hens competitor's list those who just finish to play
      * @param teamForPhaseTwo competitor's list for next step
      */
     @Override
-    void selectTeamForPhaseTwo(List<Competitor> hens, List<Competitor> teamForPhaseTwo) {
+    public void selectTeamForPhaseTwo(List<Competitor> hens, List<Competitor> teamForPhaseTwo) {
         teamForPhaseTwo.addAll(this.bestCompetitors(hens));
-        this.bestSecond.addAll(this.bestCompetitors(hens));
-        if(this.bestSecond.size() == 8){
-            teamForPhaseTwo.addAll(this.bestSecond);
+        this.bestThird.add(this.bestCompetitor(hens));
+        if(this.bestThird.size() == 3){
+            while (this.bestThird.size() != 1) {
+                Competitor best = this.bestCompetitor(this.bestThird);
+                teamForPhaseTwo.add(best);
+                this.bestThird.remove(best);
+            }
         }
     }
 }
