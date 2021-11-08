@@ -5,9 +5,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+/**
+ * @author traorea
+ *
+ */
 public abstract class SelectTeamMethodStrategy {
     /**
-     * allows to cut the competitor's list according to the type of methode select
+     * allows to cut the competitor's list according to the type of method select
      * @param groupStage a map that contains for each key a list of competitor
      * @param competitorList competitor's list
      */

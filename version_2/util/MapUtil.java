@@ -11,12 +11,12 @@ import java.util.Map.Entry;
 public class MapUtil {
 
 	/**
-	 * <p>sortByDescendingValue.</p>
+	 * sortByDescendingValue
 	 *
-	 * @param map a {@link java.util.Map} object.
-	 * @param <K> a K object.
-	 * @param <V> a V object.
-	 * @return a {@link java.util.Map} object.
+	 * @param map 
+	 * @param <K> 
+	 * @param <V> 
+	 * @return a java.util.Map
 	 */
 	public static <K, V extends Comparable<? super V>> Map<K, V> sortByDescendingValue(Map<K, V> map) {
 

@@ -5,12 +5,16 @@ import java.util.List;
 import java.util.Map;
 
 
+/**
+ * @author traorea
+ *
+ */
 public class TwentyFourTeamStrategy extends SelectTeamMethodStrategy {
     private final int NBCOMPETITOR = 24;
 
     private List<Competitor>bestThird = new ArrayList<>();
     /**
-     * allows to cut the competitor's list according to the type of methode select
+     * allows to cut the competitor's list according to the type of method select
      *
      * @param groupStage     a map that contains for each key a list of competitor
      * @param competitorList competitor's list

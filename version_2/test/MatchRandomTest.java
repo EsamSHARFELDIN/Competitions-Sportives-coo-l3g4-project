@@ -9,6 +9,10 @@ import main.*;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * @author traorea
+ *
+ */
 public class MatchRandomTest {
     private Competitor competitor1;
     private Competitor competitor2;

@@ -3,13 +3,22 @@ package main;
 import java.util.Random;
 
 
+/**
+ * @author traorea
+ *
+ */
 public class MatchRandom implements Match{
     /**
-     * <p>Constructor for MatchRandom.</p>
+     * Constructor for MatchRandom.
      */
     public MatchRandom(){}
 
-    /** {@inheritDoc} */
+   
+    /**
+     * @param competitor1 .
+     * @param competitor2 .
+     * @return winner .
+     */
     public Competitor playMatch(Competitor competitor1, Competitor competitor2) {
         Competitor winner;
         int random = new Random().nextInt(2);

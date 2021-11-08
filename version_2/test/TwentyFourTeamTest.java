@@ -7,6 +7,10 @@ import main.*;
 
 import java.util.List;
 
+/**
+ * @author traorea
+ *
+ */
 public class TwentyFourTeamTest extends SelectTeamMethodTest{
 
     @Override

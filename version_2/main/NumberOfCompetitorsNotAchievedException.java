@@ -2,12 +2,17 @@ package main;
 
 
 
+/**
+ * @author traorea
+ *
+ */
 public class NumberOfCompetitorsNotAchievedException extends Exception{
 
-    /**
-	 * 
+
+	/**
+	 * Constructor for NumberOfCompetitorsNotAchievedExceptio
+	 * @param msg
 	 */
-	private static final long serialVersionUID = 1L;
 
 	public NumberOfCompetitorsNotAchievedException(String msg){
         super(msg);

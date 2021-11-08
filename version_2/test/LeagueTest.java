@@ -4,6 +4,10 @@ import java.util.List;
 
 import main.*;
 
+/**
+ * @author traorea
+ *
+ */
 public class LeagueTest extends CompetitionTest{
 
     @Override

@@ -6,12 +6,16 @@ import java.util.Map;
 
 
 
+/**
+ * @author traorea
+ *
+ */
 public class TwoFirstPlusTwoSecondStrategy extends SelectTeamMethodStrategy{
     private final int NBCOMPETITOR = 32;
     private List<Competitor>bestSecond = new ArrayList<>();
 
     /**
-     * allows to cut the competitor's list according to the type of methode select
+     * allows to cut the competitor's list according to the type of method select
      *
      * @param groupStage     a map that contains for each key a list of competitor
      * @param competitorList competitor's list

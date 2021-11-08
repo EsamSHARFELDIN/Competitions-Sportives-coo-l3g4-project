@@ -5,6 +5,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+/**
+ * @author traorea
+ *
+ */
 public abstract class SelectTeamMethod {
     /**
      * allows to cut the competitor's list according to the type of methode select

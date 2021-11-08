@@ -8,6 +8,10 @@ import main.Competition;
 import main.Competitor;
 import main.Tournament;
 
+/**
+ * @author traorea
+ *
+ */
 public class TournamentTest extends CompetitionTest{
     @Override
     protected Competition createCompetition(List<Competitor> competitorsList) {

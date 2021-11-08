@@ -14,6 +14,10 @@ import java.util.List;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+/**
+ * @author traorea
+ *
+ */
 public abstract class CompetitionTest {
     protected   Match match;
     protected   List<Competitor> competitorsList;

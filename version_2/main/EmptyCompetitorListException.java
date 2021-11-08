@@ -1,17 +1,20 @@
 package main;
 
 
+/**
+ * @author traorea
+ *
+ */
 public class EmptyCompetitorListException extends Exception{
-    /**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+  
+
 
 	/**
-     * <p>Constructor for EmptyCompetitorListException.</p>
+     * Constructor for EmptyCompetitorListException
      *
-     * @param msg a {@link java.lang.String} object.
+     * @param msg 
      */
+  
     public EmptyCompetitorListException(String msg){
         super(msg);
     }

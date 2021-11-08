@@ -3,18 +3,30 @@ package main;
 import java.util.List;
 
 
+/**
+ * @author traorea
+ *
+ */
 public class Tournament extends Competition{
 
     /**
-     * <p>Constructor for Tournament.</p>
+     * Constructor for Tournament
      *
-     * @param competitorList a {@link java.util.List} object.
+     * @param competitorList .
      */
     public Tournament(List<Competitor> competitorList) {
         super(competitorList);
     }
 
-    /** {@inheritDoc} */
+    /**
+     * allow to play all the match according to type of competition
+     *
+     * @param competitors list of competitors
+     * @throws EmptyCompetitorListException
+     * @throws ListSizeIsNotPowerOfTwoException
+     * @ throw new exception if competitor's list empty
+     * throw new exception if competitor's list size should  not be power of 2
+     */
     @Override
     public void play(List<Competitor> competitorList) throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException{
         if(competitorList.isEmpty())
@@ -41,7 +53,6 @@ public class Tournament extends Competition{
     }
 
     /**
-     * {@inheritDoc}
      *
      * return true if list of competitors is power of 2, false else
      */
@@ -51,7 +62,7 @@ public class Tournament extends Competition{
         return (((float)competitorList.size()/2)%2)==0.0;
     }
     /**
-     * <p>classification.</p>
+     * classification
      */
     public void classification(List<Competitor>competitorList){
         competitorList.forEach(competitor -> {

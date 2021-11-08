@@ -6,6 +6,10 @@ import main.*;
 
 import java.util.List;
 
+/**
+ * @author traorea
+ *
+ */
 public class SixteenTeamTest extends SelectTeamMethodTest{
 
     @Override

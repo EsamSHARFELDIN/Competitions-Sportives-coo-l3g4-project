@@ -3,19 +3,36 @@ package main;
 import java.util.List;
 
 
+/**
+ * @author traorea
+ *
+ */
+
+
 public class League extends Competition{
 
     /**
-     * <p>Constructor for League.</p>
+     * Constructor for League
      *
-     * @param competitorList a {@link java.util.List} object.
+     * 
      */
     public League(List<Competitor>competitorList){
         super(competitorList);
     }
 
-    /** {@inheritDoc} */
-    @Override
+  
+   
+  
+   
+  
+    /**
+     * allow to play all the match according to type of competition
+     *
+     * @param competitors list of competitors
+     * @throws EmptyCompetitorListException
+     * @ throw new exception if competitor's list empty
+     */
+   
     public void play(List<Competitor> competitors) throws EmptyCompetitorListException {
         if(competitors.isEmpty())
             throw new EmptyCompetitorListException("competitor's list should not be empty");
@@ -29,7 +46,7 @@ public class League extends Competition{
     }
 
     /**
-     * {@inheritDoc}
+     *
      *
      * return true if competitor's list size is power of 2, false else
      */

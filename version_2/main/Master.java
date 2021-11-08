@@ -9,14 +9,19 @@ import java.util.Set;
 
 
 
+/**
+ * @author traorea
+ *
+ */
 public class Master  extends Competition {
     private Map<Integer, List<Competitor>>groupStage;
     private List<Competitor>competitorsForPhaseTwo;
     private SelectTeamMethodStrategy selectTeamMethod;
     /**
-     * <p>Constructor for Competition.</p>
+     * Constructor for Competition
      *
-     * @param competitorList a {@link List} object.
+     * @param competitorList 
+     * @param selectTeamMethod
      */
     public Master(List<Competitor> competitorList, SelectTeamMethodStrategy selectTeamMethod) {
         super(competitorList);
@@ -30,6 +35,7 @@ public class Master  extends Competition {
     /**
      * allows all the hens in the competition to play
      * @throws EmptyCompetitorListException
+     * @throws NumberOfCompetitorsNotAchievedException
      */
     private void groupStage() throws EmptyCompetitorListException, NumberOfCompetitorsNotAchievedException {
         this.speaker("Phase de poule");
@@ -87,7 +93,8 @@ public class Master  extends Competition {
     }
 
     /**
-     * <p>classification.</p>
+     * classification
+     * @param competitorList a list of competitor
      */
     @Override
     public void classification(List<Competitor>competitorList) {
@@ -99,8 +106,8 @@ public class Master  extends Competition {
     /**
      * return true if competitor's list size is power of 2, false else
      *
-     * @param competitorsList a {@link List} object.
-     * @return <code>true</code> or <code>false</code>
+     * @param competitorsList .
+     * @return true or false
      */
     @Override
     public boolean isPowerOfTwo(List<Competitor> competitorsList) {
