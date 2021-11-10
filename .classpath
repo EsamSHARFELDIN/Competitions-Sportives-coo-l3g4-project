@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="version_1/src"/>
+	<classpathentry kind="src" path="version_2"/>
+	<classpathentry kind="lib" path="version_1/competition.jar"/>
+	<classpathentry kind="lib" path="version_1/junit-4.3.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
