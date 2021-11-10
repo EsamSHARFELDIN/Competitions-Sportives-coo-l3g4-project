@@ -31,7 +31,7 @@
   * `>>>cd adama-traore-coo-l3g4-project`
   puis pour compiler, faites la commande 
 
- *  `>>> javac -encoding utf8 -d cls -cp cls src/competition/*.java src/util/*.java`
+ *  `>>> javac -encoding utf8 -d cls -cp cls competition/*.java util/*.java`
 
 
   ## Générer la documentation :
@@ -41,7 +41,7 @@
 
   puis pour compiler, faites la commande 
   
-  * `>>> javadoc -d  doc  -cp doc src/competition/*.java src/util/*.java`
+  * `>>> javadoc -d  doc  -cp doc competition/*.java util/*.java`
 
 
   ## creation du jar
@@ -65,7 +65,7 @@ Ouvrir le fichier index.html puis pacourir tous les fichiers.
 Placez vous dans le dossier
 * `>>>cd adama-traore-coo-l3g4-project`
 puis faites la commande :
-* `javac -d cls -cp cls  -classpath junit-4.3.jar src/competitionTest/*.java src/competition/*.java src/util/*.java`
+* `javac -d cls -cp cls  -classpath junit-4.3.jar competitionTest/*.java competition/*.java util/*.java`
 
 ## Lancer le jeu
 
@@ -87,4 +87,4 @@ pour le tournament: `java -jar competition.jar  T Lynx Raven Drift Catalyst Mida
 ## Remarque :
   Pour l'exécution du projet, j'ai choisi de permettre à l'utilisateur d'entrer sur la ligne de commande le type de compétition (L ou T) ainsi que les noms des Competitors, ce qui m'a valu de faire un switch dans la fonction main, ce qui en effet ne respecte pas l'OCP.
 ## Diagramme UML :
-![Screenshot](src/uml/diagramme.png)
+![Screenshot](uml/diagramme.png)
