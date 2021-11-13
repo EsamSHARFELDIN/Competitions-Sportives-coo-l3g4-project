@@ -28,7 +28,7 @@
   ## Compiler tout le dossier (classes) :
 
   on se place dans 
-  * `>>>cd adama-traore-coo-l3g4-project`
+  * `>>>cd adama-traore-coo-l3g4-project/version_1`
   puis pour compiler, faites la commande 
 
  *  `>>> javac -encoding utf8 -d cls -cp cls competition/*.java util/*.java`
@@ -37,7 +37,7 @@
   ## Générer la documentation :
   
    on se place dans 
-  * `>>>cd adama-traore-coo-l3g4-project`
+  * `>>>cd adama-traore-coo-l3g4-project/version_1`
 
   puis pour compiler, faites la commande 
   
@@ -63,14 +63,14 @@ Ouvrir le fichier index.html puis pacourir tous les fichiers.
 ## Compilation des tests
 
 Placez vous dans le dossier
-* `>>>cd adama-traore-coo-l3g4-project`
+* `>>>cd adama-traore-coo-l3g4-project/version_1`
 puis faites la commande :
 * `javac -d cls -cp cls  -classpath junit-4.3.jar competitionTest/*.java competition/*.java util/*.java`
 
 ## Lancer le jeu
 
 Placez vous dans le dossier
-* `>>>cd adama-traore-coo-l3g4-project`
+* `>>>cd adama-traore-coo-l3g4-project/version_1`
 
 puis pour lancer, faites la commande :
 
