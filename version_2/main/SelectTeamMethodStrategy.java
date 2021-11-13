@@ -1,5 +1,4 @@
 package main;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +15,6 @@ public abstract class SelectTeamMethodStrategy {
      * @param competitorList competitor's list
      */
     public abstract void selectTeamMethod(Map<Integer, List<Competitor>> groupStage, List<Competitor> competitorList) throws NumberOfCompetitorsNotAchievedException;
-
     /**
      * allows to select the teams according an certain criteria define by each class that implement the method
      * @param hens competitor's list those who just finish to play

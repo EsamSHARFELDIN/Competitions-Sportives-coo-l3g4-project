@@ -31,7 +31,6 @@ public class TwentyFourTeam extends SelectTeamMethod{
             }
         }
     }
-
     /**
      * allows to select the teams according an certain criteria define by each class that implement the method
      *

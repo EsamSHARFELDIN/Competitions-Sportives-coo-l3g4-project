@@ -34,7 +34,6 @@ public class TwentyFourTeamStrategy extends SelectTeamMethodStrategy {
             }
         }
     }
-
     /**
      * allows to select the teams according an certain criteria define by each class that implement the method
      * select the two first of each hens and then select the best second of each hens, then select the 2 best second in the of 3

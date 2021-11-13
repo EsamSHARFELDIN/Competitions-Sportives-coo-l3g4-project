@@ -9,7 +9,7 @@ package main;
  * @author traorea
  *
  */
-public class Competitor {
+public class Competitor{
     private String pseudo;
     private int points;
 

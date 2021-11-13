@@ -2,7 +2,6 @@
                                 Projet 2 COO
 ------------------------------------------------------------------------
 ## PROJECT TITLE:
-
   compétition
 
 ## PURPOSE OF PROJECT:

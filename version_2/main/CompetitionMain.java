@@ -11,7 +11,7 @@ import java.util.Set;
  * @author traorea
  *
  */
-public class CompetitionMain {
+public class CompetitionMain{
     /**
      * @param competition
      */

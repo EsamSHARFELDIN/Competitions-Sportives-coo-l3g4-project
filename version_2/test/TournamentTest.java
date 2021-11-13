@@ -1,7 +1,6 @@
 package test;
 
 
-
 import java.util.List;
 
 import main.Competition;

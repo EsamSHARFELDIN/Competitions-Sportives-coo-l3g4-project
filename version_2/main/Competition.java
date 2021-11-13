@@ -9,7 +9,7 @@ import static util.MapUtil.sortByDescendingValue;
  * @author traorea
  *
  */
-public abstract class Competition {
+public abstract class Competition{
     protected Match match;
     protected List<Competitor>competitorList;
     protected Map<Competitor, Integer>competitors = new HashMap<>();
