@@ -1,11 +1,11 @@
 package main;
 
 
-
 /**
  * @author traorea
  *
  */
+@SuppressWarnings("serial")
 public class ListSizeIsNotPowerOfTwoException extends Exception{
    
 

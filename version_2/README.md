@@ -7,7 +7,6 @@
 ## PURPOSE OF PROJECT:
 
   Le projet a pour objectif de simuler des matchs avec un choix de compétition
-
 ## VERSION or DATE:
 
   14/11/2021

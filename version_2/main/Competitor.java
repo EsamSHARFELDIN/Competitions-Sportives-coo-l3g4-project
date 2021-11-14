@@ -1,10 +1,5 @@
 package main;
 
-
-/**
- * @author traorea
- *
- */
 /**
  * @author traorea
  *

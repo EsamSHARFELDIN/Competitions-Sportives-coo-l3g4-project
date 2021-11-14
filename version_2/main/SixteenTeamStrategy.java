@@ -9,6 +9,7 @@ import java.util.Map;
  * @author traorea
  *
  */
+
 public class SixteenTeamStrategy extends SelectTeamMethodStrategy {
     private final int NBCOMPETITOR = 16;
     public SixteenTeamStrategy(){}
