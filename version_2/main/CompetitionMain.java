@@ -6,14 +6,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import java.util.*;
-
-/**
- * <p>CompetitionMain class.</p>
- *
- * @author legeek
- * @version $Id: $Id
- */
 public class CompetitionMain {
     public static void play(Competition competition){
         try{
