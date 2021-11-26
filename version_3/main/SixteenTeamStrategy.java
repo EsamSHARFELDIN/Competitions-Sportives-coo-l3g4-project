@@ -10,7 +10,7 @@ public class SixteenTeamStrategy extends SelectTeamMethodStrategy {
     private final int NBCOMPETITOR = 16;
     public SixteenTeamStrategy(){}
     /**
-     * allows to cut the competitor's list according to the type of methode select
+     * allows to cut the competitor's list according to the type of method select
      * cut the competitor's list in 4 group of four competitor
      * @param groupStage     a map that contains for each key a list of competitor
      * @param competitorList competitor's list
