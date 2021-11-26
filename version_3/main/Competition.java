@@ -1,22 +1,27 @@
 package main;
 
+import static util.MapUtil.sortByDescendingValue;
 import java.util.*;
 
-import static util.MapUtil.sortByDescendingValue;
-
 /**
- * @author traorea
+ * <p>Abstract Competition class.</p>
  *
+ * @author legeek
+ * @version $Id: $Id
  */
-public abstract class Competition{
+public abstract class Competition {
     protected Match match;
     protected List<Competitor>competitorList;
     protected Map<Competitor, Integer>competitors = new HashMap<>();
+    protected static List<CompetitionObserver>observerList = new ArrayList<>();;
 
-    
+    /**
+     * <p>Constructor for Competition.</p>
+     *
+     * @param competitorList a {@link java.util.List} object.
+     */
     public Competition(List<Competitor> competitorList) {
         this.competitorList = competitorList;
-        this.match = new MatchRandom();
     }
 
     /**
@@ -45,8 +50,11 @@ public abstract class Competition{
      * @param competitor2 second competitor
      */
     protected void playMatch(Competitor competitor1, Competitor competitor2){
+        this.match = new MatchRandom();
         Competitor winner = this.match.playMatch(competitor1, competitor2);
+
         displayWinner(competitor1, competitor2, winner);
+        this.watchMatch(competitor1, competitor2, winner);
     }
 
     /**
@@ -64,11 +72,11 @@ public abstract class Competition{
      * @param c2 competitor two
      */
     private void displayWinner(Competitor c1, Competitor c2, Competitor winner){
-        System.out.println(c1.toString()+" vs "+c2.getPseudo()+ " ---> "+winner.getPseudo()+" wins !  🏆");
+        System.out.println(c1.getPseudo()+" vs "+c2.getPseudo()+ " ---> "+winner.getPseudo()+" wins !");
     }
 
     /**
-     *classification.
+     * <p>classification.</p>
      */
     public abstract void classification(List<Competitor>competitorList);
 
@@ -76,14 +84,36 @@ public abstract class Competition{
     /**
      * return true if competitor's list size is power of 2, false else
      *
-     * @param competitorsList .
-     * @return true or false
+     * @param competitorsList a {@link java.util.List} object.
+     * @return <code>true</code> or <code>false</code>
      */
     public abstract boolean isPowerOfTwo(List<Competitor>competitorsList);
 
-	protected abstract void addObserver(Journalists journalists);
+    /**
+     * add observer to the list of observers
+     * @param observer
+     */
+    public void addObserver(CompetitionObserver observer){
+        observerList.add(observer);
+    }
 
-	protected abstract void addObserver(BookMakers bookMakers);
+    /**
+     * remove observer from list of observers
+     * @param observer
+     */
+    public void removeObserver(CompetitionObserver observer){
+        observerList.remove(observer);
+    }
 
-
+    /**
+     * loop over the list of observer then apply the specific method watchMatch
+     * @param c1 Competitor
+     * @param c2 Competitor
+     * @param winner Competitor "the winner between c1 and c2"
+     */
+    public void watchMatch(Competitor c1, Competitor c2, Competitor winner){
+        observerList.forEach(observer -> {
+            observer.watchMatch(c1, c2, winner);
+        });
+    }
 }
