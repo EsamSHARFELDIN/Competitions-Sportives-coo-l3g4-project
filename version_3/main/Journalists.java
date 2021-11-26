@@ -1,6 +1,7 @@
 package main;
 
 
+
 public class Journalists implements CompetitionObserver{
     private String mediaName;
 

@@ -2,12 +2,7 @@ package main;
 
 import java.util.Random;
 
-/**
- * <p>MatchRandom class.</p>
- *
- * @author legeek
- * @version $Id: $Id
- */
+
 public class MatchRandom implements Match{
     /**
      * <p>Constructor for MatchRandom.</p>

@@ -1,11 +1,6 @@
 package main;
 
-/**
- * <p>EmptyCompetitorListException class.</p>
- *
- * @author legeek
- * @version $Id: $Id
- */
+
 public class EmptyCompetitorListException extends Exception{
     /**
 	 * 

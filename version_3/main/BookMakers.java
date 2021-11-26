@@ -1,6 +1,5 @@
 package main;
 
-
 import java.util.*;
 
 public class BookMakers implements CompetitionObserver{

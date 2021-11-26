@@ -1,11 +1,6 @@
 package main;
 
-/**
- * <p>Match interface.</p>
- *
- * @author legeek
- * @version $Id: $Id
- */
+
 public interface Match {
     /**
      * allows to play a match

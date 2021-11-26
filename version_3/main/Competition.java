@@ -3,31 +3,18 @@ package main;
 import static util.MapUtil.sortByDescendingValue;
 import java.util.*;
 
-/**
- * <p>Abstract Competition class.</p>
- *
- * @author legeek
- * @version $Id: $Id
- */
+
 public abstract class Competition {
     protected Match match;
     protected List<Competitor>competitorList;
     protected Map<Competitor, Integer>competitors = new HashMap<>();
-    protected static List<CompetitionObserver>observerList = new ArrayList<>();;
+    protected static List<CompetitionObserver>observerList = new ArrayList<>();
 
-    /**
-     * <p>Constructor for Competition.</p>
-     *
-     * @param competitorList a {@link java.util.List} object.
-     */
+
     public Competition(List<Competitor> competitorList) {
         this.competitorList = competitorList;
     }
 
-    /**
-     * start the competition
-     * @throws competition.EmptyCompetitorListException -if competition's list size is empty
-     */
     public void play() throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException {
         play(this.competitorList);
     }

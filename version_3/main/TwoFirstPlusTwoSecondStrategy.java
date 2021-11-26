@@ -30,6 +30,7 @@ public class TwoFirstPlusTwoSecondStrategy extends SelectTeamMethodStrategy{
         }
     }
 
+    
     /**
      * allows to select the teams according an certain criteria define by each class that implement the method
      * select the two first of each group and then select the two second

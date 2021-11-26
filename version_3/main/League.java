@@ -1,20 +1,13 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.List;
 
-/**
- * <p>League class.</p>
- *
- * @author legeek
- * @version $Id: $Id
- */
-public class League extends Competition{
 
-    /**
-     * <p>Constructor for League.</p>
-     *
-     * @param competitorList a {@link java.util.List} object.
-     */
+public class League extends Competition{
+	 protected static List<Journalists>journalistsList = new ArrayList<>();
+	 protected static List<BookMakers>bookMakersList = new ArrayList<>();
+  
     public League(List<Competitor>competitorList){
         super(competitorList);
     }
@@ -51,6 +44,7 @@ public class League extends Competition{
             this.competitors.put(competitor, competitor.getPoints());
         });
     }
+
 
 
 }

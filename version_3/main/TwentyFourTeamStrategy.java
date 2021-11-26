@@ -30,6 +30,7 @@ public class TwentyFourTeamStrategy extends SelectTeamMethodStrategy {
             }
         }
     }
+    
 
     /**
      * allows to select the teams according an certain criteria define by each class that implement the method

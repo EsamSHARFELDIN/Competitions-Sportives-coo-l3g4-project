@@ -1,10 +1,12 @@
 package main;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class Tournament extends Competition{
-
+	 protected static List<Journalists>journalistsList = new ArrayList<>();
+	 protected static List<BookMakers>bookMakersList = new ArrayList<>();
   
     public Tournament(List<Competitor> competitorList) {
         super(competitorList);
@@ -55,15 +57,5 @@ public class Tournament extends Competition{
         });
     }
 
-	@Override
-	protected void addObserver(Journalists journalists) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	@Override
-	protected void addObserver(BookMakers bookMakers) {
-		// TODO Auto-generated method stub
-		
-	}
 }

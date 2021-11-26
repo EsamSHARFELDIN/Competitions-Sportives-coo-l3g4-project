@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------
-                                Projet 2 COO
+                                Projet 3 COO
 ------------------------------------------------------------------------
 ## PROJECT TITLE:
   compétition
@@ -9,12 +9,12 @@
   Le projet a pour objectif de simuler des matchs avec un choix de compétition
 ## VERSION or DATE:
 
-  14/11/2021
+  12/12/2021
   
 
 ## AUTHORS:
 
-  Adama TRAORÉ
+  Adama TRAORÉ & Esam Sharfeldin
 
 ## USER INSTRUCTIONS:
 
@@ -26,7 +26,7 @@
   ## Compiler tout le dossier (classes) :
 
   on se place dans 
-  * `>>>cd adama-traore-coo-l3g4-project/version_2`
+  * `>>>cd adama-traore-coo-l3g4-project/version_3`
   puis pour compiler, faites la commande 
 
  *  `>>> javac -encoding utf8 -d cls -cp cls  main/*.java util/*.java  `
@@ -35,7 +35,7 @@
   ## Générer la documentation :
   
    on se place dans 
-  * `>>>cd adama-traore-coo-l3g4-project/version_2`
+  * `>>>cd adama-traore-coo-l3g4-project/version_3`
 
   puis pour compiler, faites la commande 
   
@@ -43,7 +43,7 @@
 
   ## compiler les tests :
   on se place dans 
-  * `>>>cd adama-traore-coo-l3g4-project/version_2`
+  * `>>>cd adama-traore-coo-l3g4-project/version_3`
   puis pour compiler, faites la commande 
  * `>>> javac -encoding utf8 -d cls -cp cls -classpath junit-4.3.jar main/*.java util/*.java test/*.java`
 
@@ -65,7 +65,7 @@ Ouvrir le fichier index.html puis pacourir tous les fichiers.
 ## Lancer le jeu
 
 Placez vous dans le dossier
-* `>>>cd adama-traore-coo-l3g4-project/version_2`
+* `>>>cd adama-traore-coo-l3g4-project/version_3`
 
 puis pour lancer, faites la commande :
 
@@ -85,4 +85,4 @@ puis pour lancer, faites la commande :
   Pour l'exécution du projet, j'ai choisi de permettre à l'utilisateur d'entrer sur la ligne de commande le type de compétition (L ou T) ainsi que les noms des Competitors, ce qui m'a valu de faire un switch dans la fonction main, ce qui en effet ne respecte pas l'OCP.
   Pour la dernière stratégie (M32) pas la peine de saisir vu le nombre d'équipes assez conséquent donc juste le paramètre M32 puis Entrez
 ## Diagramme UML :
-![Screenshot](../version_2/uml/diagramme.png)
+![Screenshot](../version_3/uml/diagramme.png)

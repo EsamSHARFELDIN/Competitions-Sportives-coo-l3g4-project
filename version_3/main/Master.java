@@ -37,7 +37,6 @@ public class Master  extends Competition {
             competitorList = entry.getValue();
             league = new League(competitorList);
             this.speaker(" Matchs poule N° "+entry.getKey()+ " ");
-            //System.out.println(this.observerList.size());
             league.play(competitorList);
             this.selectTeamMethod.selectTeamForPhaseTwo(competitorList, this.competitorsForPhaseTwo);
         }
@@ -101,15 +100,5 @@ public class Master  extends Competition {
     public boolean isPowerOfTwo(List<Competitor> competitorsList) {
         return false;
     }
-	@Override
-	protected void addObserver(Journalists journalists) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	protected void addObserver(BookMakers bookMakers) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

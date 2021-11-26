@@ -2,6 +2,7 @@ package main;
 
 public class NumberOfCompetitorsNotAchievedException extends Exception{
 
+	
     /**
 	 * 
 	 */
