@@ -96,7 +96,6 @@ public abstract class Competition {
     public void addObserver(CompetitionObserver observer){
         observerList.add(observer);
     }
-
     /**
      * remove observer from list of observers
      * @param observer
