@@ -1,9 +1,11 @@
 package main;
 
-
+import java.util.ArrayList;
+import java.util.List;
 
 public class Journalists implements CompetitionObserver{
     private String mediaName;
+    protected static List<CompetitionObserver>observerList = new ArrayList<>();
 
     public Journalists(String mediaName){
         this.mediaName = mediaName;
@@ -16,4 +18,5 @@ public class Journalists implements CompetitionObserver{
         System.out.println("** Competitor 2 : "+c2.toString()+" **");
         System.out.println("** Le gagnant est : "+winner.toString()+" **");
     }
+	
 }

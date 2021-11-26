@@ -8,13 +8,17 @@ public abstract class Competition {
     protected Match match;
     protected List<Competitor>competitorList;
     protected Map<Competitor, Integer>competitors = new HashMap<>();
-    protected static List<CompetitionObserver>observerList = new ArrayList<>();
+    protected static List<CompetitionObserver>observerList = new ArrayList<>();;
 
 
     public Competition(List<Competitor> competitorList) {
         this.competitorList = competitorList;
     }
 
+    /**
+     * start the competition
+     * @throws competition.EmptyCompetitorListException -if competition's list size is empty
+     */
     public void play() throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException {
         play(this.competitorList);
     }
@@ -68,12 +72,7 @@ public abstract class Competition {
     public abstract void classification(List<Competitor>competitorList);
 
 
-    /**
-     * return true if competitor's list size is power of 2, false else
-     *
-     * @param competitorsList a {@link java.util.List} object.
-     * @return <code>true</code> or <code>false</code>
-     */
+   
     public abstract boolean isPowerOfTwo(List<Competitor>competitorsList);
 
     /**
@@ -83,6 +82,7 @@ public abstract class Competition {
     public void addObserver(CompetitionObserver observer){
         observerList.add(observer);
     }
+
     /**
      * remove observer from list of observers
      * @param observer
@@ -102,4 +102,4 @@ public abstract class Competition {
             observer.watchMatch(c1, c2, winner);
         });
     }
-}
+    }

@@ -5,6 +5,7 @@ import java.util.*;
 public class BookMakers implements CompetitionObserver{
     private Map<Competitor, Integer>rateMap;
     private String bookMakerName;
+    protected static List<CompetitionObserver>observerList = new ArrayList<>();
 
     public BookMakers(String bookMakerName, List<Competitor>competitorList){
         this.rateMap = new HashMap<>();

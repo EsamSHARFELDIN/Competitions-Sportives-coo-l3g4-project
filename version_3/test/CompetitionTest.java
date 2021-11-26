@@ -1,16 +1,16 @@
 package test;
 
 
-import org.junit.Before;
-import org.junit.Test;
-
-import main.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import org.junit.Before;
+import org.junit.Test;
+
+import main.*;
 
 public abstract class CompetitionTest {
     protected   Match match;

@@ -19,11 +19,7 @@ public class CompetitionMain {
             System.out.println(except.getMessage());
         }
     }
-    /**
-     * <p>main.</p>
-     *
-     * @param args an array of {@link java.lang.String} objects.
-     */
+ 
     public static void main(String []args){
         Competition competition;
         SelectTeamMethodStrategy selectTeamMethod;

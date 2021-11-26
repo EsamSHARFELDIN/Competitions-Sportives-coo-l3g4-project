@@ -5,11 +5,11 @@ import java.util.Random;
 
 public class MatchRandom implements Match{
     /**
-     * <p>Constructor for MatchRandom.</p>
+     * Constructor for MatchRandom
      */
     public MatchRandom(){}
 
-    /** {@inheritDoc} */
+    
     public Competitor playMatch(Competitor competitor1, Competitor competitor2) {
         Competitor winner;
         int random = new Random().nextInt(2);

@@ -7,11 +7,7 @@ public class Master  extends Competition {
 	private Map<Integer, List<Competitor>>groupStage;
     private List<Competitor>competitorsForPhaseTwo;
     private SelectTeamMethodStrategy selectTeamMethod;
-    /**
-     * <p>Constructor for Competition.</p>
-     *
-     * @param competitorList a {@link List} object.
-     */
+ 
     public Master(List<Competitor> competitorList, SelectTeamMethodStrategy selectTeamMethod) {
         super(competitorList);
         this.groupStage = new HashMap<>();
@@ -93,8 +89,8 @@ public class Master  extends Competition {
     /**
      * return true if competitor's list size is power of 2, false else
      *
-     * @param competitorsList a {@link List} object.
-     * @return <code>true</code> or <code>false</code>
+     * @param competitorsList .
+     * @return true or false
      */
     @Override
     public boolean isPowerOfTwo(List<Competitor> competitorsList) {

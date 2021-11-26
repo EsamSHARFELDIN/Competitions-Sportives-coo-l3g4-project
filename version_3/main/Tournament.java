@@ -12,7 +12,7 @@ public class Tournament extends Competition{
         super(competitorList);
     }
 
-    /** {@inheritDoc} */
+    
     @Override
     public void play(List<Competitor> competitorList) throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException{
         if(competitorList.isEmpty())
@@ -39,7 +39,6 @@ public class Tournament extends Competition{
     }
 
     /**
-     * {@inheritDoc}
      *
      * return true if list of competitors is power of 2, false else
      */
