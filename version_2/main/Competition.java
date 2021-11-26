@@ -81,9 +81,6 @@ public abstract class Competition{
      */
     public abstract boolean isPowerOfTwo(List<Competitor>competitorsList);
 
-	protected abstract void addObserver(Journalists journalists);
-
-	protected abstract void addObserver(BookMakers bookMakers);
 
 
 }
