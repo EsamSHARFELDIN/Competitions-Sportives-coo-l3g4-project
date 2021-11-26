@@ -3,7 +3,7 @@ package main;
 
 public class Competitor {
 	/**
-	 * @author traorea
+	 * @author traorea sharfeldin
 	 *
 	 */
 	    private String pseudo;

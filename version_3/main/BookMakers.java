@@ -7,6 +7,11 @@ public class BookMakers implements CompetitionObserver{
     private String bookMakerName;
     protected static List<CompetitionObserver>observerList = new ArrayList<>();
 
+    /**
+     * constructor BookMakers
+     * @param bookMakerName
+     * @param competitorList
+     */
     public BookMakers(String bookMakerName, List<Competitor>competitorList){
         this.rateMap = new HashMap<>();
         this.bookMakerName = bookMakerName;

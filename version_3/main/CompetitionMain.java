@@ -55,15 +55,20 @@ public class CompetitionMain {
                 competition.addObserver(new BookMakers("Bet+", competitorList));
                 play(competition);
                 break;
-            case "M32":
-                for(int i=1; i<=32; i++){
-                    Competitor competitor = new Competitor("Team"+i);
-                    competitorList.add(competitor);
-                }
-                selectTeamMethod = new TwoFirstPlusTwoSecondStrategy();
+            case "M32" :
+            	for(int i=1; i<=32; i++){
+                       Competitor competitor = new Competitor("c"+i);
+                       competitorList.add(competitor);   
+                   }
+            	selectTeamMethod = new TwoFirstPlusTwoSecondStrategy();
                 competition = new Master(competitorList, selectTeamMethod);
+                competition.addObserver(new Journalists("Canal+"));
+                competition.addObserver(new BookMakers("Bet+", competitorList));
                 play(competition);
                 break;
+             default :
+            	 System.out.println("Choix Incorrect ");
+            	 break;
         }
 
     }

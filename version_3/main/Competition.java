@@ -11,6 +11,10 @@ public abstract class Competition {
     protected static List<CompetitionObserver>observerList = new ArrayList<>();;
 
 
+    /**
+     * constructor Competition
+     * @param competitorList
+     */
     public Competition(List<Competitor> competitorList) {
         this.competitorList = competitorList;
     }
@@ -67,7 +71,7 @@ public abstract class Competition {
     }
 
     /**
-     * <p>classification.</p>
+     * classification
      */
     public abstract void classification(List<Competitor>competitorList);
 
