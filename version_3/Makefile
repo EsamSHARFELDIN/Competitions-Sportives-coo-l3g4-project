@@ -2,7 +2,7 @@ author: Adama TRAORE Esam SHARFELDIN
 
 cls:
 
-		javac -encoding utf8 -d cls -cp cls -classpath junit-4.3.jar main/*.java util/*.java
+		javac -encoding utf8 -d cls -cp cls -classpath junit-4.3.jar main/*.java util/*.java  test/*.java
 
 clean:
 

@@ -29,33 +29,24 @@
   * `>>>cd adama-traore-coo-l3g4-project/version_3`
   puis pour compiler, faites la commande 
 
- *  `>>> javac -encoding utf8 -d cls -cp cls  main/*.java util/*.java  `
+ *  `>>> make cls `
 
 
   ## Générer la documentation :
+   pour compiler, faites la commande 
   
-   on se place dans 
-  * `>>>cd adama-traore-coo-l3g4-project/version_3`
-
-  puis pour compiler, faites la commande 
-  
-  * `>>> javac  -d doc -cp doc  main/*.java util/*.java`
+  * `>>> make doc`
 
   ## compiler les tests :
   on se place dans 
-  * `>>>cd adama-traore-coo-l3g4-project/version_3`
   puis pour compiler, faites la commande 
- * `>>> javac -encoding utf8 -d cls -cp cls -classpath junit-4.3.jar main/*.java util/*.java test/*.java`
+ * `>>> make test`
 
   ## creation du jar
 
-  on se place dans 
-
-  * `>>>cd cls`
-
-  puis faites la commande
+  faites la commande
   
-  * `jar cvmf ../manifest-ex ../master.jar main/*.class util/*.class test/*.class`
+  * `make jar`
 
 
   ## Consulter documentation :
@@ -64,23 +55,17 @@ Ouvrir le fichier index.html puis pacourir tous les fichiers.
 
 ## Lancer le jeu
 
-Placez vous dans le dossier
-* `>>>cd adama-traore-coo-l3g4-project/version_3`
+ pour lancer, faites la commande :
 
-puis pour lancer, faites la commande :
-
- `java -jar  master.jar  typeCompet(M16 ou M24 ou M32) c1 c2 c3 ... ` 
-# exemple 16 :
-  `java -jar master.jar  M16  c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16` 
-
+ `>>> make T`   pour le tournemant                                                          
+ `>>> make L`   pour la league                                                                      
+ `>>> make M16`   pour competition avec 16 équipes                                                   
+ `>>> make M24`    pour competition avec 24 équipes                                                  
+ `>>> make M32` pour competition avec 32 équipes                                                   
 
 
-# exemple 24 :
-  `java -jar master.jar  M24  c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24`
-
-                   
-  `java -jar  master.jar  typeCompet(L ou T ) c1 c2 c3 ... ` 
-# exemple = `java -jar master.jar  L  c1 c2 c3 c4 c5 c6 c7 c8`
+ pour supprimer le dossier cls et doc faites la commande:                                            
+ `>>> make clean`
 
 
 ## Element de code:
