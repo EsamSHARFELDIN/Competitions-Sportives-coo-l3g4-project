@@ -8,12 +8,21 @@ public class Master  extends Competition {
     private List<Competitor>competitorsForPhaseTwo;
     private SelectTeamMethodStrategy selectTeamMethod;
  
+    /**
+     * constructor Master
+     * @param competitorList
+     * @param selectTeamMethod
+     */
     public Master(List<Competitor> competitorList, SelectTeamMethodStrategy selectTeamMethod) {
         super(competitorList);
         this.groupStage = new HashMap<>();
         this.competitorsForPhaseTwo = new ArrayList<>();
         this.selectTeamMethod = selectTeamMethod;
     }
+    /**
+     * @param msg
+     * display message
+     */
     private void speaker(String msg){
         System.out.println("*********** "+ msg + " ************");
     }

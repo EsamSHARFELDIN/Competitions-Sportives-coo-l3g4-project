@@ -90,5 +90,9 @@ puis pour lancer, faites la commande :
 ## Remarque :
   Pour l'exécution du projet, j'ai choisi de permettre à l'utilisateur d'entrer sur la ligne de commande le type de compétition (L ou T) ainsi que les noms des Competitors, ce qui m'a valu de faire un switch dans la fonction main, ce qui en effet ne respecte pas l'OCP.
   Pour la dernière stratégie (M32) pas la peine de saisir vu le nombre d'équipes assez conséquent donc juste le paramètre M32 puis Entrez
+
+## Difficultés rencontrées :
+ Nous avons réussi le test de addObserver
+ parcontre pour rateUpdateTest,competitorRateTest, looserTest nous avons eu des difficultés car il fallait faire le test de l'interface CompetitionObserver.
 ## Diagramme UML :
 ![Screenshot](../version_3/uml/diagramme.png)

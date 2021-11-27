@@ -106,4 +106,10 @@ public abstract class Competition {
             observer.watchMatch(c1, c2, winner);
         });
     }
+
+	public boolean contains(Journalists journalists) {
+			return true;
+	}
+
+
     }

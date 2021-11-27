@@ -53,4 +53,11 @@ public abstract class CompetitionTest {
         competitorsList.add(c4);
         assertTrue(this.competition.isPowerOfTwo(this.competitorsList));
     }
+	@Test
+    public void addObserverTest() {
+    	Journalists journalists = new Journalists("Canal+");
+    	competition.addObserver(journalists);
+    	assertTrue(this.competition.contains(journalists));
+    }
+
 }

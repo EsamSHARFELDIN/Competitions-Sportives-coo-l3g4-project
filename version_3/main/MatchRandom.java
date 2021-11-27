@@ -10,6 +10,11 @@ public class MatchRandom implements Match{
     public MatchRandom(){}
 
     
+    /**
+     *@param competitor1
+     *@param competitor2
+     *return Competitor winner
+     */
     public Competitor playMatch(Competitor competitor1, Competitor competitor2) {
         Competitor winner;
         int random = new Random().nextInt(2);

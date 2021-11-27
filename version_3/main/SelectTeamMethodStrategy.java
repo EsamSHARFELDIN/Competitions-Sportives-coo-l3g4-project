@@ -8,6 +8,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.Random;
 
+/**
+ * @author traorea_sharfeldin
+ *
+ */
 public abstract class SelectTeamMethodStrategy {
     /**
      * allows to cut the competitor's list according to the type of method select

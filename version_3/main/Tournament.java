@@ -4,10 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 
+/**
+ * @author traorea_sharfeldin
+ *
+ */
 public class Tournament extends Competition{
 	 protected static List<Journalists>journalistsList = new ArrayList<>();
 	 protected static List<BookMakers>bookMakersList = new ArrayList<>();
   
+    /**
+     * constructor for Tournament
+     * @param competitorList
+     */
     public Tournament(List<Competitor> competitorList) {
         super(competitorList);
     }
