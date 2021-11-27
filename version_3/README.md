@@ -33,7 +33,7 @@
 
 
   ## Générer la documentation :
-   pour compiler, faites la commande 
+   pour générer, faites la commande 
   
   * `>>> make doc`
 
@@ -57,11 +57,11 @@ Ouvrir le fichier index.html puis pacourir tous les fichiers.
 
  pour lancer, faites la commande :
 
- `>>> make T`   pour le tournemant                                                          
- `>>> make L`   pour la league                                                                      
- `>>> make M16`   pour competition avec 16 équipes                                                   
- `>>> make M24`    pour competition avec 24 équipes                                                  
- `>>> make M32` pour competition avec 32 équipes                                                   
+ `>>> make T`   pour le tournament.                                                          
+ `>>> make L`   pour la league.                                                                     
+ `>>> make M16`   pour une competition avec 16 équipes.                                             
+ `>>> make M24`    pour une competition avec 24 équipes.                                             
+ `>>> make M32` pour une competition avec 32 équipes.                                                
 
 
  pour supprimer le dossier cls et doc faites la commande:                                            
@@ -74,7 +74,6 @@ Ouvrir le fichier index.html puis pacourir tous les fichiers.
 
 ## Remarque :
   Pour l'exécution du projet, j'ai choisi de permettre à l'utilisateur d'entrer sur la ligne de commande le type de compétition (L ou T) ainsi que les noms des Competitors, ce qui m'a valu de faire un switch dans la fonction main, ce qui en effet ne respecte pas l'OCP.
-  Pour la dernière stratégie (M32) pas la peine de saisir vu le nombre d'équipes assez conséquent donc juste le paramètre M32 puis Entrez
 
 ## Difficultés rencontrées :
  Nous avons réussi le test de addObserver
