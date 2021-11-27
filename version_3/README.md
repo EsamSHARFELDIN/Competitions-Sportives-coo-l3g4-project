@@ -93,6 +93,6 @@ puis pour lancer, faites la commande :
 
 ## Difficultés rencontrées :
  Nous avons réussi le test de addObserver
- parcontre pour rateUpdateTest,competitorRateTest, looserTest nous avons eu des difficultés car il fallait faire le test de l'interface CompetitionObserver.
+ parcontre pour rateUpdateTest,competitorRateTest, looserTest nous avons eu des difficultés car il fallait faire le test de l'interface CompetitionObserver, faire le test d'une interface nous a semblé bizare.
 ## Diagramme UML :
 ![Screenshot](../version_3/uml/diagramme.png)
