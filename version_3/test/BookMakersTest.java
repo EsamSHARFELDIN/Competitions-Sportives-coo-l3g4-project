@@ -1,17 +1,16 @@
-/*package test;
+package test;
 
 
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.Map;
 
 import org.junit.Test;
 
-import main.*;
+import main.Competitor;
 
-public class BookMakersTest {
+public class BookMakersTest implements CompetitionObserverTest {
 	private Map<Competitor, Integer>rateMap;
 
 
@@ -33,5 +32,7 @@ public class BookMakersTest {
 		Competitor c1 = new Competitor("Team2");
 		assertEquals(c1.equals(winner),c1);
 	}
-	
-}*/
+	@Test
+	public void watchMatchTest() {}
+
+}
