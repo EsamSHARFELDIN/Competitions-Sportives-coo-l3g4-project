@@ -67,7 +67,8 @@ public abstract class Competition {
      * @param c2 competitor two
      */
     private void displayWinner(Competitor c1, Competitor c2, Competitor winner){
-        System.out.println(c1.getPseudo()+" vs "+c2.getPseudo()+ " ---> "+winner.getPseudo()+" wins !");
+    	System.out.println("****************display  winner******************************");
+        System.out.println("*********************************"+c1.getPseudo()+" vs "+c2.getPseudo()+ " ---> "+winner.getPseudo()+" wins !");
     }
 
     /**

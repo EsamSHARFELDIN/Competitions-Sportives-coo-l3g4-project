@@ -69,7 +69,7 @@ public class BookMakers implements CompetitionObserver{
         Set<Map.Entry<Competitor, Integer>> competitorEntry = this.rateMap.entrySet();
         System.out.println("**** Bookmaker présent "+this.bookMakerName+" ****");
         for (Map.Entry<Competitor, Integer> entry : competitorEntry) {
-            System.out.println(entry.getKey() + " Cote : " + entry.getValue());           
+            System.out.println(" *************    "+entry.getKey() + " Cote : " + entry.getValue());           
      
         }
     }

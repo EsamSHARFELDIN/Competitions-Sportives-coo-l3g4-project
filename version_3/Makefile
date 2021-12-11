@@ -1,7 +1,6 @@
 author: Adama TRAORE Esam SHARFELDIN
 
 cls:
-
 		javac -encoding utf8 -d cls -cp cls -classpath junit-4.3.jar main/*.java util/*.java  test/*.java
 
 clean:
@@ -20,22 +19,22 @@ jar:
 
 L:
 
-	java -jar master.jar  L  c1 c2 c3 c4 c5 c6 c7 c8
+	    java -jar master.jar  L  Saint-Étienne Lyon Clermont Montpellier Marseille Nice Monaco Troyes
 
 T: 
 
-	java -jar master.jar  T  c1 c2 c3 c4 c5 c6 c7 c8
+	    java -jar master.jar  T  Saint-Étienne Lyon Clermont Montpellier Marseille Nice Monaco Troyes
 
 
 M16:
-		java -jar master.jar  M16  c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16
+		java -jar master.jar  M16  Saint-Étienne Lyon Clermont Montpellier Marseille Nice Monaco Troyes Bordeaux Paris Reims Metz Strasbourg Angers Nantes Rennes
 
 M24:
 
-	java -jar master.jar  M24  c1 c2 c3 c4 c5 c6 c7 c8 c9 c10 c11 c12 c13 c14 c15 c16 c17 c18 c19 c20 c21 c22 c23 c24
+	    java -jar master.jar  M24  Saint-Étienne Lyon Clermont Montpellier Marseille Nice Monaco Troyes Bordeaux Paris Reims Metz Strasbourg Angers Nantes Rennes  Lens Lille Lorient Brest saint-quentin Artois Valencienne Barca 
 
 
 M32:
 
-	java -jar master.jar  M32
+	    java -jar master.jar  M32
 

@@ -8,12 +8,12 @@ public class CompetitionMain {
     public static void play(Competition competition){
         try{
             competition.play();
-            System.out.println("**** Ranking ****");
+            System.out.println("****************Ranking ****");
             Set<Map.Entry<Competitor, Integer>> competitorEntry = competition.ranking().entrySet();
             Iterator<Map.Entry<Competitor, Integer>> iterator = competitorEntry.iterator();
             while (iterator.hasNext()){
                 Map.Entry<Competitor, Integer> entry = iterator.next();
-                System.out.println(entry.getKey().toString() + "-" + entry.getValue());
+                System.out.println("************* "+entry.getKey().toString() + "-" + entry.getValue());
             }
         }catch (EmptyCompetitorListException | ListSizeIsNotPowerOfTwoException except){
             System.out.println(except.getMessage());
@@ -57,7 +57,7 @@ public class CompetitionMain {
                 break;
             case "M32" :
             	for(int i=1; i<=32; i++){
-                       Competitor competitor = new Competitor("c"+i);
+                       Competitor competitor = new Competitor("team"+i);
                        competitorList.add(competitor);   
                    }
             	selectTeamMethod = new TwoFirstPlusTwoSecondStrategy();

@@ -38,7 +38,6 @@
   * `>>> make doc`
 
   ## compiler les tests :
-  on se place dans 
   puis pour compiler, faites la commande 
  * `>>> make test`
 
@@ -69,11 +68,8 @@ Ouvrir le fichier index.html puis pacourir tous les fichiers.
 
 
 ## Element de code:
-  Mise en pratique des principes SOLID, notamment l'open closed principle sur les types de compétitions et les types de match. Mise en pratique du TDD (Test Drive Development).  Mise en pratique pour la 2ème version du projet, le design pattern strategy
+  Mise en pratique des principes SOLID, notamment l'open closed principle sur les types de compétitions et les types de match. Mise en pratique du TDD (Test Drive Development).  Mise en pratique pour la 3ème version du projet, le design pattern strategy
 
-
-## Remarque :
-  Pour l'exécution du projet, j'ai choisi de permettre à l'utilisateur d'entrer sur la ligne de commande le type de compétition (L ou T) ainsi que les noms des Competitors, ce qui m'a valu de faire un switch dans la fonction main, ce qui en effet ne respecte pas l'OCP.
 
 ## Difficultés rencontrées :
  Nous avons réussi le test de addObserver
