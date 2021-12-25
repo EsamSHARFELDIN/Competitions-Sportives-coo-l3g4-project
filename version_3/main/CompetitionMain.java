@@ -8,7 +8,10 @@ public class CompetitionMain {
     public static void play(Competition competition){
         try{
             competition.play();
-            System.out.println("****************Ranking ****");
+			/*
+			 * System.out.println("------------------------\n");
+			 * System.out.println("****************Ranking ****");
+			 */
             Set<Map.Entry<Competitor, Integer>> competitorEntry = competition.ranking().entrySet();
             Iterator<Map.Entry<Competitor, Integer>> iterator = competitorEntry.iterator();
             while (iterator.hasNext()){

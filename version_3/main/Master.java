@@ -42,7 +42,7 @@ public class Master  extends Competition {
         	for(Competitor c : entry.getValue()) {
         		System.out.println(c.getPseudo());
         	}
-        	System.out.println("--------------------");
+        	System.out.println("======================================");
         }
         System.out.println("======================================");
         League league;
@@ -53,7 +53,9 @@ public class Master  extends Competition {
             Map.Entry<Integer, List<Competitor>> entry = iterator.next();
             competitorList = entry.getValue();
             league = new League(competitorList);
-            this.speaker(" Matchs poule N° "+entry.getKey()+ " ");
+            System.out.println("-----------------------------");
+            this.speaker(" Poule N°"+entry.getKey()+ " -  Matchs");
+            System.out.println("-----------------------------");
             league.play(competitorList);
             this.selectTeamMethod.selectTeamForPhaseTwo(competitorList, this.competitorsForPhaseTwo);
         }
@@ -64,13 +66,14 @@ public class Master  extends Competition {
      * @throws ListSizeIsNotPowerOfTwoException
      * @throws EmptyCompetitorListException
      */
-    private void finaleStage() throws ListSizeIsNotPowerOfTwoException, EmptyCompetitorListException {
-        this.speaker("Phase de finale");
-        Tournament tournament = new Tournament(this.competitorsForPhaseTwo);
-        this.resetCompetitorsPoint(this.competitorsForPhaseTwo);
-        tournament.play(this.competitorsForPhaseTwo);
-        classification(this.competitorsForPhaseTwo);
-    }
+	/*
+	 * private void finaleStage() throws ListSizeIsNotPowerOfTwoException,
+	 * EmptyCompetitorListException { this.speaker("Phase de finale"); Tournament
+	 * tournament = new Tournament(this.competitorsForPhaseTwo);
+	 * this.resetCompetitorsPoint(this.competitorsForPhaseTwo);
+	 * tournament.play(this.competitorsForPhaseTwo);
+	 * classification(this.competitorsForPhaseTwo); }
+	 */
 
     /**
      * reset the competitor's point to zero
@@ -90,7 +93,7 @@ public class Master  extends Competition {
         try{
             this.groupStage();
             
-            this.finaleStage();
+           // this.finaleStage();
 
         }catch (NumberOfCompetitorsNotAchievedException e){
             e.printStackTrace();
