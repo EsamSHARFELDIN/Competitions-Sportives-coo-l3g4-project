@@ -30,7 +30,7 @@ public class BookMakers implements CompetitionObserver{
      * @param c2 Competitor "team 2"
      * @param winner Competitor "the winner between the two"
      */
-    private void rateUpdate(Competitor c1, Competitor c2, Competitor winner){
+    public void rateUpdate(Competitor c1, Competitor c2, Competitor winner){
         int winnerRate = competitorRate(winner)-1;
         if(winnerRate <= 0)
             this.rateMap.put(winner, 1);
@@ -47,7 +47,7 @@ public class BookMakers implements CompetitionObserver{
      * @param winner Competitor "the winner between the two"
      * @return Competitor
      */
-    private Competitor looser(Competitor c1, Competitor c2, Competitor winner){
+    public Competitor looser(Competitor c1, Competitor c2, Competitor winner){
         if(!c1.equals(winner))
             return c1;
         return c2;
@@ -58,7 +58,7 @@ public class BookMakers implements CompetitionObserver{
      * @param competitor "a competitor"
      * @return int
      */
-    private int competitorRate(Competitor competitor){
+    public int competitorRate(Competitor competitor){
         return this.rateMap.get(competitor);
     }
 
