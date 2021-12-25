@@ -95,7 +95,6 @@ public class Master  extends Competition {
         }catch (NumberOfCompetitorsNotAchievedException e){
             e.printStackTrace();
         }
-
     }
 
     /**
