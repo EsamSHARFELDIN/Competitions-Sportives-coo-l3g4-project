@@ -2,6 +2,7 @@ package main;
 
 
 import java.util.*;
+import java.util.Map.Entry;
 
 public class Master  extends Competition {
 	private Map<Integer, List<Competitor>>groupStage;
@@ -31,8 +32,19 @@ public class Master  extends Competition {
      * @throws EmptyCompetitorListException
      */
     private void groupStage() throws EmptyCompetitorListException, NumberOfCompetitorsNotAchievedException {
-        this.speaker("Phase de poules");
+        //this.speaker("Phase de poules");
         this.selectTeamMethod.selectTeamMethod(this.groupStage, this.competitorList);
+        System.out.println("Les poules :");
+        System.out.println("----------");
+        for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) {
+        	System.out.format("Poule %d \n", entry.getKey());
+        	System.out.println("========");
+        	for(Competitor c : entry.getValue()) {
+        		System.out.println(c.getPseudo());
+        	}
+        	System.out.println("--------------------");
+        }
+        System.out.println("======================================");
         League league;
         List<Competitor> competitorList;
         Set<Map.Entry<Integer, List<Competitor>>> competitorListEntry = this.groupStage.entrySet();
@@ -77,6 +89,7 @@ public class Master  extends Competition {
     public void play(List<Competitor> competitors) throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException {
         try{
             this.groupStage();
+            
             this.finaleStage();
 
         }catch (NumberOfCompetitorsNotAchievedException e){

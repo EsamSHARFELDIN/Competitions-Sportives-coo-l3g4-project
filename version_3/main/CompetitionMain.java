@@ -19,6 +19,19 @@ public class CompetitionMain {
             System.out.println(except.getMessage());
         }
     }
+    
+    private static void displayWelcom(String type, List<Competitor> competitorList) {
+    	System.out.println("========================");
+    	System.out.format("Le %s commence\n", type);
+    	System.out.println("========================\n");
+    	System.out.println("Les équipes en jeu ");
+    	System.out.println("------------------------\n");
+    	
+    	for(Competitor c : competitorList) {
+    		System.out.println(c.getPseudo());
+    	}
+    	System.out.println();
+    }
  
     public static void main(String []args){
         Competition competition;
@@ -42,6 +55,7 @@ public class CompetitionMain {
                 play(competition);
                 break;
             case "M16":
+            	displayWelcom("Master 16", competitorList);
                 selectTeamMethod = new SixteenTeamStrategy();
                 competition = new Master(competitorList, selectTeamMethod);
                 competition.addObserver(new Journalists("Canal+"));
