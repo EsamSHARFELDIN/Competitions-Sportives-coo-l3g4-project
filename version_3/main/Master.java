@@ -4,10 +4,13 @@ package main;
 import java.util.*;
 import java.util.Map.Entry;
 
+
+
 public class Master  extends Competition {
 	private Map<Integer, List<Competitor>>groupStage;
     private List<Competitor>competitorsForPhaseTwo;
     private SelectTeamMethodStrategy selectTeamMethod;
+    private Map<Competitor, Integer>rateMap;
  
     /**
      * constructor Master
@@ -36,6 +39,7 @@ public class Master  extends Competition {
         this.selectTeamMethod.selectTeamMethod(this.groupStage, this.competitorList);
         System.out.println("Les poules :");
         System.out.println("----------");
+       
         for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) {
         	System.out.format("Poule %d \n", entry.getKey());
         	System.out.println("========");
@@ -49,15 +53,27 @@ public class Master  extends Competition {
         List<Competitor> competitorList;
         Set<Map.Entry<Integer, List<Competitor>>> competitorListEntry = this.groupStage.entrySet();
         Iterator<Map.Entry<Integer, List<Competitor>>> iterator = competitorListEntry.iterator();
+        
         while (iterator.hasNext()){
             Map.Entry<Integer, List<Competitor>> entry = iterator.next();
             competitorList = entry.getValue();
             league = new League(competitorList);
+            
             System.out.println("-----------------------------");
             this.speaker(" Poule N°"+entry.getKey()+ " -  Matchs");
             System.out.println("-----------------------------");
+            
             league.play(competitorList);
             this.selectTeamMethod.selectTeamForPhaseTwo(competitorList, this.competitorsForPhaseTwo);
+            System.out.println();
+            
+            this.speaker(" Poule N°"+entry.getKey()+ " -  Cotes");
+            System.out.println("-----------------------------");
+            
+            
+            
+            
+                        
         }
     }
 
@@ -82,12 +98,14 @@ public class Master  extends Competition {
     private void resetCompetitorsPoint(List<Competitor>competitorList){
         competitorList.forEach(Competitor::resetPoint);
     }
+    
     /**
      * allows to play all the match according to type of competition
      * @param competitors list of competitors
      * @throws EmptyCompetitorListException throws an exception when that list is empty
      * @throws ListSizeIsNotPowerOfTwoException throws an exception when list's size is not power of 2
      */
+    
     @Override
     public void play(List<Competitor> competitors) throws EmptyCompetitorListException, ListSizeIsNotPowerOfTwoException {
         try{
@@ -120,5 +138,6 @@ public class Master  extends Competition {
     public boolean isPowerOfTwo(List<Competitor> competitorsList) {
         return false;
     }
+    
 
 }
