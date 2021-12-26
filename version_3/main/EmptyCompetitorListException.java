@@ -4,6 +4,7 @@ package main;
 /**
  * @author traorea_sharfeldin
  *
+ *
  */
 public class EmptyCompetitorListException extends Exception{
     /**

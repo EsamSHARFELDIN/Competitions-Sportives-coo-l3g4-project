@@ -11,9 +11,14 @@ doc:
 
 		javac  -d doc -cp doc  main/*.java util/*.java
 
+<<<<<<< HEAD
 tests:
 	java -jar junit-platform-console-standalone-1.8.1.jar -cp test --scan-class-path --disable-banner
 
+=======
+test:
+		java - jar junit-4.3.jar -cp test  --scan-class-path --disable-banner
+>>>>>>> branch 'main' of git@gitlab-etu.fil.univ-lille1.fr:traorea/adama-traore-coo-l3g4-project.git
 
 jar: 
 		jar cvmf manifest-ex master.jar cls/main/*.class cls/util/*.class
