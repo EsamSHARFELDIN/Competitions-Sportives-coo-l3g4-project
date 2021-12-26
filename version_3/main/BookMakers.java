@@ -1,6 +1,10 @@
 package main;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 public class BookMakers implements CompetitionObserver{
     private Map<Competitor, Integer>rateMap;
@@ -17,12 +21,16 @@ public class BookMakers implements CompetitionObserver{
         this.bookMakerName = bookMakerName;
         competitorList.forEach(competitor -> {
             this.rateMap.put(competitor, 1);
+            
         });
     }
     @Override
     public void watchMatch(Competitor c1, Competitor c2, Competitor winner) {
         this.rateUpdate(c1, c2, winner);
+        
+        
     }
+    
 
     /**
      * update the competitor's rate
@@ -37,7 +45,8 @@ public class BookMakers implements CompetitionObserver{
         else
             this.rateMap.put(winner, winnerRate);
         this.rateMap.put(looser(c1, c2, winner), competitorRate(looser(c1, c2, winner))+1);
-        this.displayTheCompetitorsRate();
+        //this.displayTheCompetitorsRate();
+        
     }
 
     /**
@@ -52,7 +61,6 @@ public class BookMakers implements CompetitionObserver{
             return c1;
         return c2;
     }
-
     /**
      * return the competitor's rate
      * @param competitor "a competitor"
@@ -66,13 +74,15 @@ public class BookMakers implements CompetitionObserver{
      * display the competitor's rate
      */
 	
-	  private void displayTheCompetitorsRate(){ Set<Map.Entry<Competitor, Integer>>
-	  competitorEntry = this.rateMap.entrySet();
-	  System.out.println("**** Bookmaker présent "+this.bookMakerName+" ****"); for
-	  (Map.Entry<Competitor, Integer> entry : competitorEntry) {
-	  System.out.println(" *************    "+entry.getKey() + " Cote : " +
-	  entry.getValue());
+	  
+	 
+	
+	  public void displayTheCompetitorsRate(){ Set<Map.Entry<Competitor, Integer>>
+	  competitorEntry = this.rateMap.entrySet(); for (Map.Entry<Competitor,
+	  Integer> entry : competitorEntry) { System.out.println(entry.getKey() +
+	  " Cote = " + entry.getValue());
 	  
 	  } }
+	 
 	 
 }

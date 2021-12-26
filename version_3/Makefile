@@ -12,7 +12,7 @@ doc:
 		javac  -d doc -cp doc  main/*.java util/*.java
 
 test:
-		javac -encoding utf8 -d cls -cp cls -classpath junit-4.3.jar main/*.java util/*.java test/*.java
+		java - jar junit-4.3.jar -cp test  --scan-class-path --disable-banner
 
 jar: 
 		jar cvmf manifest-ex master.jar cls/main/*.class cls/util/*.class

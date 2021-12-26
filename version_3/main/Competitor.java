@@ -6,11 +6,13 @@ public class Competitor {
 	 * @author traorea sharfeldin
 	 *
 	 */
+	
 	    private String pseudo;
 	    private int points;
 
 	    /**
 	     * @param pseudo
+	     * 
 	     */
 	    
 	    public Competitor(String pseudo) {

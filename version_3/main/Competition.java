@@ -8,9 +8,8 @@ public abstract class Competition {
     protected Match match;
     protected List<Competitor>competitorList;
     protected Map<Competitor, Integer>competitors = new HashMap<>();
-    protected static List<CompetitionObserver>observerList = new ArrayList<>();;
-
-
+    protected static List<CompetitionObserver>observerList = new ArrayList<>();
+    private Map<Competitor, Integer>rateMap;
     /**
      * constructor Competition
      * @param competitorList
@@ -52,6 +51,7 @@ public abstract class Competition {
         this.watchMatch(competitor1, competitor2, winner);
     }
 
+    
     /**
      * sort the competitors by their points
      *
@@ -67,8 +67,7 @@ public abstract class Competition {
      * @param c2 competitor two
      */
     private void displayWinner(Competitor c1, Competitor c2, Competitor winner){
-    	//System.out.println("****************display  winner******************************");
-        System.out.println(c1.getPseudo()+" vs "+c2.getPseudo()+ " => "+winner.getPseudo());
+        System.out.println("   "+c1.getPseudo()+" vs "+c2.getPseudo()+ " => "+winner.getPseudo());
     }
 
     /**
@@ -110,7 +109,10 @@ public abstract class Competition {
 
 	public boolean contains(Journalists journalists) {
 			return true;
+			
 	}
+
+	
 
 
     }

@@ -4,9 +4,11 @@ package main;
 import java.util.*;
 
 
+
 public class CompetitionMain {
     public static void play(Competition competition){
         try{
+        	
             competition.play();
 			/*
 			 * System.out.println("------------------------\n");
@@ -20,9 +22,8 @@ public class CompetitionMain {
             }
         }catch (EmptyCompetitorListException | ListSizeIsNotPowerOfTwoException except){
             System.out.println(except.getMessage());
-        }
-    }
-    
+        }	
+    }    
     private static void displayWelcom(String type, List<Competitor> competitorList) {
     	System.out.println("========================");
     	System.out.format("Le %s commence\n", type);
