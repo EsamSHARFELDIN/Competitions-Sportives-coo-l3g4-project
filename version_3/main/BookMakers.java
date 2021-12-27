@@ -1,19 +1,14 @@
 package main;
 
-<<<<<<< HEAD
-import java.util.*; 
 
-=======
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
->>>>>>> branch 'main' of git@gitlab-etu.fil.univ-lille1.fr:traorea/adama-traore-coo-l3g4-project.git
+
 
 public class BookMakers implements CompetitionObserver{
     private Map<Competitor, Integer>rateMap;
-    private String bookMakerName;
     protected static List<CompetitionObserver>observerList = new ArrayList<>();
 
     /**
@@ -23,7 +18,6 @@ public class BookMakers implements CompetitionObserver{
      */
     public BookMakers(String bookMakerName, List<Competitor>competitorList){
         this.rateMap = new HashMap<>();
-        this.bookMakerName = bookMakerName;
         competitorList.forEach(competitor -> {
             this.rateMap.put(competitor, 1);
             
@@ -36,6 +30,10 @@ public class BookMakers implements CompetitionObserver{
         
     }
     
+    
+    public void watchPoule(List<Competitor> competitorList){
+       this.displayTheCompetitorsRate(competitorList);
+    }
 
     /**
      * update the competitor's rate
@@ -50,7 +48,6 @@ public class BookMakers implements CompetitionObserver{
         else
             this.rateMap.put(winner, winnerRate);
         this.rateMap.put(looser(c1, c2, winner), competitorRate(looser(c1, c2, winner))+1);
-        //this.displayTheCompetitorsRate();
         
     }
 
@@ -79,21 +76,10 @@ public class BookMakers implements CompetitionObserver{
      * display the competitor's rate
      */
 	
-<<<<<<< HEAD
-    public void displayTheCompetitorsRate(){ Set<Map.Entry<Competitor, Integer>>
-	  competitorEntry = this.rateMap.entrySet();
-	 // System.out.println("**** Bookmaker présent "+this.bookMakerName+" ****"); 
-    for (Map.Entry<Competitor, Integer> entry : competitorEntry) {
-	  System.out.println(entry.getKey() + " Cote : " + entry.getValue());
-=======
-	  
-	 
-	
-	  public void displayTheCompetitorsRate(){ Set<Map.Entry<Competitor, Integer>>
-	  competitorEntry = this.rateMap.entrySet(); for (Map.Entry<Competitor,
-	  Integer> entry : competitorEntry) { System.out.println(entry.getKey() +
-	  " Cote = " + entry.getValue());
->>>>>>> branch 'main' of git@gitlab-etu.fil.univ-lille1.fr:traorea/adama-traore-coo-l3g4-project.git
+
+    public void displayTheCompetitorsRate(List<Competitor> competitorList){  
+    for (Competitor c:competitorList) {
+	  System.out.println(c.getPseudo() + " Cote : " + competitorRate(c));
 	  
 	  }
     }

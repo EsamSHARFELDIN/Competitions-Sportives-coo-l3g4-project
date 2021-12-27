@@ -10,12 +10,10 @@ public class CompetitionMain {
         try{
         	
             competition.play();
-			/*
-			 * System.out.println("------------------------\n");
-			 * System.out.println("****************Ranking ****");
-			 */
+			
             Set<Map.Entry<Competitor, Integer>> competitorEntry = competition.ranking().entrySet();
             Iterator<Map.Entry<Competitor, Integer>> iterator = competitorEntry.iterator();
+            
             while (iterator.hasNext()){
                 Map.Entry<Competitor, Integer> entry = iterator.next();
                 System.out.println("************* "+entry.getKey().toString() + "-" + entry.getValue());
@@ -24,7 +22,7 @@ public class CompetitionMain {
             System.out.println(except.getMessage());
         }	
     }    
-    private static void displayWelcom(String type, List<Competitor> competitorList) {
+    private static void displayWelcome(String type, List<Competitor> competitorList) {
     	System.out.println("========================");
     	System.out.format("Le %s commence\n", type);
     	System.out.println("========================\n");
@@ -41,6 +39,7 @@ public class CompetitionMain {
         Competition competition;
         SelectTeamMethodStrategy selectTeamMethod;
         List<Competitor> competitorList = new ArrayList<>();
+        
         for(int i=1; i<args.length; i++){
             Competitor competitor = new Competitor(args[i]);
             competitorList.add(competitor);
@@ -59,7 +58,7 @@ public class CompetitionMain {
                 play(competition);
                 break;
             case "M16":
-            	displayWelcom("Master 16", competitorList);
+            	displayWelcome("Master 16", competitorList);
                 selectTeamMethod = new SixteenTeamStrategy();
                 competition = new Master(competitorList, selectTeamMethod);
                 competition.addObserver(new Journalists("Canal+"));

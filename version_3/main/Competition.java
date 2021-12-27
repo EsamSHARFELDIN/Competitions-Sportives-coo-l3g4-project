@@ -9,7 +9,6 @@ public abstract class Competition {
     protected List<Competitor>competitorList;
     protected Map<Competitor, Integer>competitors = new HashMap<>();
     protected static List<CompetitionObserver>observerList = new ArrayList<>();
-    private Map<Competitor, Integer>rateMap;
     /**
      * constructor Competition
      * @param competitorList
@@ -106,7 +105,23 @@ public abstract class Competition {
             observer.watchMatch(c1, c2, winner);
         });
     }
+    
+    /**
+     * loop over the list of observer then apply the specific method watchPoule
+     * @param competitorList
+     * @return winner competitor list
+     */
+    public void watchPoule(List<Competitor> competitorList){
+        observerList.forEach(observer -> {
+            observer.watchPoule(competitorList);
+        });
+    }
 
+    /**
+     * 
+     * @param journalists
+     * @return true if it has at list one journalists  
+     */
 	public boolean contains(Journalists journalists) {
 			return true;
 			

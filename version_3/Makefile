@@ -11,25 +11,17 @@ doc:
 
 		javac  -d doc -cp doc  main/*.java util/*.java
 
-<<<<<<< HEAD
+
 tests:
 	java -jar junit-platform-console-standalone-1.8.1.jar -cp test --scan-class-path --disable-banner
 
-=======
-test:
-		java - jar junit-4.3.jar -cp test  --scan-class-path --disable-banner
->>>>>>> branch 'main' of git@gitlab-etu.fil.univ-lille1.fr:traorea/adama-traore-coo-l3g4-project.git
 
 jar: 
 		jar cvmf manifest-ex master.jar cls/main/*.class cls/util/*.class
 
 L:
 
-	    java -jar master.jar  L  Saint-Étienne Lyon Clermont Montpellier Marseille Nice Monaco Troyes
-
-T: 
-
-	    java -jar master.jar  T  Saint-Étienne Lyon Clermont Montpellier Marseille Nice Monaco Troyes
+	    java -jar master.jar  L  Saint-Étienne Lyon Clermont Montpellier Marseille Nice Monaco Troyes Bordeaux Paris Reims Metz
 
 
 M16:

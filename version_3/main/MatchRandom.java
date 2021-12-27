@@ -19,11 +19,11 @@ public class MatchRandom implements Match{
         Competitor winner;
         int random = new Random().nextInt(2);
         if(random > 0){
-            competitor1.setPoints();
+            competitor1.setCote();
             winner = competitor1;
         }
         else {
-            competitor2.setPoints();
+            competitor2.setCote();
             winner = competitor2;
         }
         return winner;

@@ -49,7 +49,7 @@ public class League extends Competition{
      */
     public void classification(List<Competitor>competitorList){
         competitorList.forEach(competitor -> {
-            this.competitors.put(competitor, competitor.getPoints());
+            this.competitors.put(competitor, competitor.getCote());
         });
     }
 

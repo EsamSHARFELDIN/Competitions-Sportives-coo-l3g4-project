@@ -1,11 +1,12 @@
 package main;
 
-
+import java.util.List;
 
 /**
  * @author traorea sharfeldin
  *
  */
+
 /*
  * interface CompetitionObserver
  * @param Competitor c1
@@ -14,5 +15,7 @@ package main;
  */
 public interface CompetitionObserver {
     void watchMatch(Competitor c1, Competitor c2, Competitor winner);
+
+	void watchPoule(List<Competitor> competitorList);
 
 }

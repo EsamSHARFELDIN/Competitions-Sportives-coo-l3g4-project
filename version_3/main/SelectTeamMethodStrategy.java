@@ -50,9 +50,9 @@ public abstract class SelectTeamMethodStrategy {
     public Competitor bestCompetitor(List<Competitor>group){
         Competitor bestComp = group.get(0);
         for(int i = 1; i<group.size(); i++){
-            if(bestComp.getPoints() < group.get(i).getPoints()){
+            if(bestComp.getCote() < group.get(i).getCote()){
                 bestComp = group.get(i);
-            }else if(bestComp.getPoints() == group.get(i).getPoints()){
+            }else if(bestComp.getCote() == group.get(i).getCote()){
                 int random = new Random().nextInt(2);
                 bestComp = group.get(random);
             }

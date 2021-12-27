@@ -10,7 +10,7 @@ public class Master  extends Competition {
 	private Map<Integer, List<Competitor>>groupStage;
     private List<Competitor>competitorsForPhaseTwo;
     private SelectTeamMethodStrategy selectTeamMethod;
-    private Map<Competitor, Integer>rateMap;
+    
  
     /**
      * constructor Master
@@ -31,12 +31,13 @@ public class Master  extends Competition {
     private void speaker(String msg){
         System.out.println("*********** "+ msg + " ************");
     }
+    
     /**
      * allows all the hens in the competition to play
      * @throws EmptyCompetitorListException
      */
     private void groupStage() throws EmptyCompetitorListException, NumberOfCompetitorsNotAchievedException {
-        //this.speaker("Phase de poules");
+       
         this.selectTeamMethod.selectTeamMethod(this.groupStage, this.competitorList);
         System.out.println("       Les poules :");
         System.out.println("----------");
@@ -52,12 +53,9 @@ public class Master  extends Competition {
         System.out.println("======================================");
         League league;
         List<Competitor> competitorList;
-        Set<Map.Entry<Integer, List<Competitor>>> competitorListEntry = this.groupStage.entrySet();
-        Iterator<Map.Entry<Integer, List<Competitor>>> iterator = competitorListEntry.iterator();
         
-        while (iterator.hasNext()){
-            Map.Entry<Integer, List<Competitor>> entry = iterator.next();
-            competitorList = entry.getValue();
+        for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) {
+        	competitorList = entry.getValue();
             league = new League(competitorList);
             
             System.out.println("-----------------------------");
@@ -65,26 +63,18 @@ public class Master  extends Competition {
             System.out.println("-----------------------------");
             
             league.play(competitorList);
+            
+            System.out.println("-----------------------------");
+            this.speaker(" Poule N°"+entry.getKey()+ " -  Cotes");
+            System.out.println("-----------------------------");
+            this.watchPoule(competitorList);
+            
             this.selectTeamMethod.selectTeamForPhaseTwo(competitorList, this.competitorsForPhaseTwo);
-<<<<<<< HEAD
             System.out.println();
             
-            this.speaker(" Poule N°"+entry.getKey()+ " -  Cotes");
-            System.out.println("-----------------------------");
             
-            
-            
-            
-                        
         }
     }
-=======
-            this.speaker(" Poule N°"+entry.getKey()+ " -  Cotes");
-            System.out.println("-----------------------------");
-            System.out.println(entry.getValue() + " Cote = " + entry.getKey());
-            
-    }}
->>>>>>> branch 'main' of git@gitlab-etu.fil.univ-lille1.fr:traorea/adama-traore-coo-l3g4-project.git
 
 	/**
      * final phase
@@ -92,21 +82,23 @@ public class Master  extends Competition {
      * @throws EmptyCompetitorListException
      */
 	
-	  private void finaleStage() throws ListSizeIsNotPowerOfTwoException, EmptyCompetitorListException 
-	  { this.speaker("Phase de finale"); 
-	  Tournament tournament = new Tournament(this.competitorsForPhaseTwo);
-	  this.resetCompetitorsPoint(this.competitorsForPhaseTwo);
-	  tournament.play(this.competitorsForPhaseTwo);
-	  classification(this.competitorsForPhaseTwo); }
+	  private void finaleStage() throws ListSizeIsNotPowerOfTwoException, EmptyCompetitorListException {
+		  this.speaker("Phase de finale"); 
+		  Tournament tournament = new Tournament(this.competitorsForPhaseTwo);
+		  //this.resetCompetitorsPoint(this.competitorsForPhaseTwo);
+		  tournament.play(this.competitorsForPhaseTwo);
+		  classification(this.competitorsForPhaseTwo);
+	  }
 	 
 
     /**
      * reset the competitor's point to zero
      * @param competitorList a list of competitor
      */
-    private void resetCompetitorsPoint(List<Competitor>competitorList){
-        competitorList.forEach(Competitor::resetPoint);
-    }
+	/*
+	 * private void resetCompetitorsPoint(List<Competitor>competitorList){
+	 * competitorList.forEach(Competitor::resetPoint); }
+	 */
     
     /**
      * allows to play all the match according to type of competition
@@ -120,7 +112,7 @@ public class Master  extends Competition {
         try{
             this.groupStage();
             
-           //this.finaleStage();
+            this.finaleStage();
            
 
         }catch (NumberOfCompetitorsNotAchievedException e){
@@ -132,9 +124,9 @@ public class Master  extends Competition {
      * <p>classification.</p>
      */
     @Override
-    public void classification(List<Competitor>competitorList) {
+    public void classification(List<Competitor> competitorList) {
         competitorList.forEach(competitor -> {
-            this.competitors.put(competitor, competitor.getPoints());
+            this.competitors.put(competitor, competitor.getCote());
         });
     }
 

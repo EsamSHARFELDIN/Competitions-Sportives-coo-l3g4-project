@@ -1,14 +1,14 @@
 package main;
 
-
+/**
+ * @author traorea sharfeldin
+ *
+ */
 public class Competitor {
-	/**
-	 * @author traorea sharfeldin
-	 *
-	 */
+	
 	
 	    private String pseudo;
-	    private int points;
+	    private int cote;
 
 	    /**
 	     * @param pseudo
@@ -17,7 +17,7 @@ public class Competitor {
 	    
 	    public Competitor(String pseudo) {
 	        this.pseudo = pseudo;
-	        this.points = 0;
+	        this.cote = 0;
 	    }
 
 	   
@@ -31,27 +31,27 @@ public class Competitor {
 
 	    /**
 	     *
-	     * @return a points.
+	     * @return a cote.
 	     */
-	    public int getPoints() {
-	        return points;
+	    public int getCote() {
+	        return cote;
 	    }
 
 	    /**
-	     * Set a competitor  points
+	     * Set a competitor cote
 	     */
-	    public void setPoints() {
-	        this.points += 1;
+	    public void setCote() {
+	        this.cote += 1;
 	    }
 
 	    /**
-	     * reset the point to zero
+	     * reset the cote to zero
 	     */
 	    /**
 	     * 
 	     */
-	    public void resetPoint(){
-	        this.points = 0;
+	    public void resetCote(){
+	        this.cote = 0;
 	    }
 	  
 	    /**

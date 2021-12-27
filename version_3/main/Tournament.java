@@ -30,7 +30,7 @@ public class Tournament extends Competition{
             int cpt = 0;
             while (flag){
                 this.playMatch(competitorList.get(cpt), competitorList.get(cpt+1));
-                if(competitorList.get(cpt).getPoints()>competitorList.get(cpt+1).getPoints())
+                if(competitorList.get(cpt).getCote()>competitorList.get(cpt+1).getCote())
                     competitorList.remove(competitorList.get(cpt+1));
                 else
                     competitorList.remove(competitorList.get(cpt));
@@ -60,7 +60,7 @@ public class Tournament extends Competition{
      */
     public void classification(List<Competitor>competitorList){
         competitorList.forEach(competitor -> {
-            this.competitors.put(competitor, competitor.getPoints());
+            this.competitors.put(competitor, competitor.getCote());
         });
     }
 

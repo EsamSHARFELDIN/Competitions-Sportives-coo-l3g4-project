@@ -22,8 +22,8 @@ public class MatchRandomTest {
 
     @Test
     public void ifWinnerPointChangeAfterCallPlayMatch(){
-        int sumPointBeforePlayMatch = this.competitor1.getPoints() + this.competitor2.getPoints();
+        int sumPointBeforePlayMatch = this.competitor1.getCote() + this.competitor2.getCote();
         this.matchRandom.playMatch(competitor1, competitor2);
-        assertEquals(sumPointBeforePlayMatch+1, competitor1.getPoints()+competitor2.getPoints());
+        assertEquals(sumPointBeforePlayMatch+1, competitor1.getCote()+competitor2.getCote());
     }
 }
