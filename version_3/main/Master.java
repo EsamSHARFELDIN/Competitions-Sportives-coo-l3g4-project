@@ -94,6 +94,7 @@ public class Master  extends Competition {
     	this.watchTeam(competitorList);
     	 
        }
+    
           System.out.println();
           System.out.println("===================================");
 		  System.out.println("        Les Matchs");
