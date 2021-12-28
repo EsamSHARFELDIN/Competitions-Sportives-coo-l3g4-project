@@ -1,7 +1,11 @@
 package main;
 
 import static util.MapUtil.sortByDescendingValue;
-import java.util.*;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public abstract class Competition {
@@ -72,11 +76,11 @@ public abstract class Competition {
     /**
      * classification
      */
-    public abstract void classification(List<Competitor>competitorList);
+    public abstract void classification(List<Competitor> competitorList);
 
 
    
-    public abstract boolean isPowerOfTwo(List<Competitor>competitorsList);
+    public abstract boolean isPowerOfTwo(List<Competitor> competitorsList);
 
     /**
      * add observer to the list of observers
@@ -126,8 +130,18 @@ public abstract class Competition {
 			return true;
 			
 	}
-
-	
-
+	 
+	public void watchCote(List<Competitor> competitorList) {
+		 observerList.forEach(observer -> {
+	            observer.watchCote(competitorList);
+	        });
+	         
+	}
+	public void watchTeam(List<Competitor> competitorList) {
+		 observerList.forEach(observer -> {
+	            observer.watchTeam(competitorList);
+	        });
+	         
+	}
 
     }

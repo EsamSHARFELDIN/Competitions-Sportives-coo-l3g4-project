@@ -19,11 +19,6 @@ tests:
 jar: 
 		jar cvmf manifest-ex master.jar cls/main/*.class cls/util/*.class
 
-L:
-
-	    java -jar master.jar  L  Saint-Étienne Lyon Clermont Montpellier Marseille Nice Monaco Troyes Bordeaux Paris Reims Metz
-
-
 M16:
 		java -jar master.jar  M16  Saint-Étienne Lyon Clermont Montpellier Marseille Nice Monaco Troyes Bordeaux Paris Reims Metz Strasbourg Angers Nantes Rennes
 

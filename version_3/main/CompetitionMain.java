@@ -45,18 +45,6 @@ public class CompetitionMain {
             competitorList.add(competitor);
         }
         switch (args[0]){
-            case "L":
-                competition = new League(competitorList);
-                competition.addObserver(new Journalists("Canal+"));
-                competition.addObserver(new BookMakers("Bet+", competitorList));
-                play(competition);
-                break;
-            case "T":
-                competition = new Tournament(competitorList);
-                competition.addObserver(new Journalists("Canal+"));
-                competition.addObserver(new BookMakers("Bet+", competitorList));
-                play(competition);
-                break;
             case "M16":
             	displayWelcome("Master 16", competitorList);
                 selectTeamMethod = new SixteenTeamStrategy();
@@ -66,6 +54,7 @@ public class CompetitionMain {
                 play(competition);
                 break;
             case "M24":
+            	displayWelcome("Master 24", competitorList);
                 selectTeamMethod = new TwentyFourTeamStrategy();
                 competition = new Master(competitorList, selectTeamMethod);
                 competition.addObserver(new Journalists("Canal+"));
@@ -73,6 +62,7 @@ public class CompetitionMain {
                 play(competition);
                 break;
             case "M32" :
+            	displayWelcome("Master 32", competitorList);
             	for(int i=1; i<=32; i++){
                        Competitor competitor = new Competitor("team"+i);
                        competitorList.add(competitor);   

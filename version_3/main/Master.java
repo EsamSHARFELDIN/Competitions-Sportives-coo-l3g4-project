@@ -35,8 +35,9 @@ public class Master  extends Competition {
     /**
      * allows all the hens in the competition to play
      * @throws EmptyCompetitorListException
+     * @throws ListSizeIsNotPowerOfTwoException 
      */
-    private void groupStage() throws EmptyCompetitorListException, NumberOfCompetitorsNotAchievedException {
+    private void groupStage() throws EmptyCompetitorListException, NumberOfCompetitorsNotAchievedException, ListSizeIsNotPowerOfTwoException {
        
         this.selectTeamMethod.selectTeamMethod(this.groupStage, this.competitorList);
         System.out.println("       Les poules :");
@@ -52,6 +53,7 @@ public class Master  extends Competition {
         }
         System.out.println("======================================");
         League league;
+        Tournament tournament;
         List<Competitor> competitorList;
         
         for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) {
@@ -68,13 +70,67 @@ public class Master  extends Competition {
             this.speaker(" Poule N°"+entry.getKey()+ " -  Cotes");
             System.out.println("-----------------------------");
             this.watchPoule(competitorList);
-            
-            this.selectTeamMethod.selectTeamForPhaseTwo(competitorList, this.competitorsForPhaseTwo);
-            System.out.println();
-            
-            
+            System.out.println("----------------------");
         }
-    }
+        this.speaker(" Équipes Sélectionnées ");
+        System.out.println("-----------------------------");
+        for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) {
+        	System.out.println("-----------------------------");
+        	System.out.format("              Poule %d \n", entry.getKey());
+        	System.out.println("-----------------------------");
+        	competitorList = entry.getValue();
+            this.watchCote(competitorList);
+            System.out.println();
+
+        }
+        System.out.println("===================================");
+    	System.out.println("        Le tournoi ! ");
+    	System.out.println(" ");
+    	System.out.println("        Les équipes");
+    	System.out.println("------------------------");
+    	System.out.println(" ");
+    for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) {
+    	competitorList = entry.getValue();
+    	this.watchTeam(competitorList);
+    	 
+       }
+          System.out.println();
+          System.out.println("===================================");
+		  System.out.println("        Les Matchs");
+		  System.out.println("------------------------");
+		  System.out.println("        1/4 finales");
+		  System.out.println(" ");
+		  for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) {
+		  competitorList = entry.getValue();
+		  tournament = new Tournament(competitorList);
+		  tournament.play(competitorList);
+		  this.watchPoule(competitorList);
+          System.out.println("----------------------");
+		  
+		  } 
+		
+		
+		  System.out.println(" "); 
+		  System.out.println("------------------------");
+		  System.out.println("        1/2 finales"); 
+		  System.out.println(" ");
+		  for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) {
+		  competitorList = entry.getValue();
+		  //this.selectTeamMethod.selectTeamForPhaseTwo(competitorList,this.competitorsForPhaseTwo); 
+		  tournament = new Tournament(competitorList);
+		  tournament.play(competitorList); }
+		  
+		  System.out.println(" "); System.out.println("------------------------");
+		  System.out.println("         finale"); for(Entry<Integer, List<Competitor>>
+		  entry : this.groupStage.entrySet()) { competitorList = entry.getValue();
+		  tournament = new Tournament(competitorList); tournament.play(competitorList);
+		  
+		  }
+		 
+		 
+		 
+ }
+      
 
 	/**
      * final phase
@@ -82,23 +138,19 @@ public class Master  extends Competition {
      * @throws EmptyCompetitorListException
      */
 	
-	  private void finaleStage() throws ListSizeIsNotPowerOfTwoException, EmptyCompetitorListException {
-		  this.speaker("Phase de finale"); 
-		  Tournament tournament = new Tournament(this.competitorsForPhaseTwo);
-		  //this.resetCompetitorsPoint(this.competitorsForPhaseTwo);
-		  tournament.play(this.competitorsForPhaseTwo);
-		  classification(this.competitorsForPhaseTwo);
-	  }
+	/*
+	 * private void finaleStage() throws ListSizeIsNotPowerOfTwoException,
+	 * EmptyCompetitorListException {
+	 * System.out.println("===================================");
+	 * this.speaker("finale"); Tournament tournament = new
+	 * Tournament(competitorList);
+	 * //this.resetCompetitorsPoint(this.competitorsForPhaseTwo);
+	 * tournament.play(competitorList); //
+	 * classification(this.competitorsForPhaseTwo); }
+	 */
 	 
 
-    /**
-     * reset the competitor's point to zero
-     * @param competitorList a list of competitor
-     */
-	/*
-	 * private void resetCompetitorsPoint(List<Competitor>competitorList){
-	 * competitorList.forEach(Competitor::resetPoint); }
-	 */
+
     
     /**
      * allows to play all the match according to type of competition
@@ -112,7 +164,7 @@ public class Master  extends Competition {
         try{
             this.groupStage();
             
-            this.finaleStage();
+            //this.finaleStage();
            
 
         }catch (NumberOfCompetitorsNotAchievedException e){
@@ -129,7 +181,6 @@ public class Master  extends Competition {
             this.competitors.put(competitor, competitor.getCote());
         });
     }
-
     /**
      * return true if competitor's list size is power of 2, false else
      *

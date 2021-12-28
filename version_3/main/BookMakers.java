@@ -34,7 +34,9 @@ public class BookMakers implements CompetitionObserver{
     public void watchPoule(List<Competitor> competitorList){
        this.displayTheCompetitorsRate(competitorList);
     }
-
+    public void watchCote(List<Competitor> competitorList){
+        this.displayTeamSelect(competitorList);
+     }
     /**
      * update the competitor's rate
      * @param c1 Competitor "team 1"
@@ -83,6 +85,49 @@ public class BookMakers implements CompetitionObserver{
 	  
 	  }
     }
+    /*
+     * display team select
+     */
+    public void displayTeamSelect(List<Competitor> competitorList) {
+    	for (Competitor c:competitorList) {
+    		if (competitorRate(c)==1 ) {
+    			System.out.println("         "+c.getPseudo() +"*");
+    		}
+    		else if (competitorRate(c)==2 ) {
+    			System.out.println("         "+c.getPseudo() +"*");
+    		}
+    		else System.out.println("         "+c.getPseudo());
+    	}
+    }
 	 
-	 
+	public void displayTeam(List<Competitor> competitorList) {
+		for (Competitor c:competitorList) {
+    		if (competitorRate(c)==1 ) {
+    			System.out.println("         "+c.getPseudo());
+    		}
+    		else if (competitorRate(c)==2 ) {
+    			System.out.println("         "+c.getPseudo() );
+    		}
+    		else;
+	}
+	}
+	@Override
+	public void watchTeam(List<Competitor> competitorList) {
+		this.displayTeam(competitorList);
+		
+	}
+	public List<Competitor> competitorList() {
+		List<Competitor> competitorList = null;
+		for (Competitor c:competitorList) {
+    		if (competitorRate(c)==1 ) {
+    			System.out.println("         "+c.getPseudo());
+    		}
+    		else if (competitorRate(c)==2 ) {
+    			System.out.println("         "+c.getPseudo() );
+    		}
+    		else;
+	}
+		return competitorList;
+		
+	}
 }

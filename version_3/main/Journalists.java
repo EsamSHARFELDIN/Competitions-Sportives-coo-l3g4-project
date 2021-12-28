@@ -38,5 +38,18 @@ public class Journalists implements CompetitionObserver{
 	public String getMediaName() {
 		return mediaName;
 	}
+
+	@Override
+	public void watchCote(List<Competitor> competitorList) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void watchTeam(List<Competitor> competitorList) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }

@@ -37,9 +37,9 @@
   
   * `>>> make doc`
 
-  ## compiler les tests :
-  puis pour compiler, faites la commande 
- * `>>> make test`
+  ## pour les tests :
+  puis pour voir, faites la commande 
+ * `>>> make tests`
 
   ## creation du jar
 
@@ -55,9 +55,7 @@ Ouvrir le fichier index.html puis pacourir tous les fichiers.
 ## Lancer le jeu
 
  pour lancer, faites la commande :
-
- `>>> make T`   pour le tournament.                                                          
- `>>> make L`   pour la league.                                                                     
+                                                                   
  `>>> make M16`   pour une competition avec 16 équipes.                                             
  `>>> make M24`    pour une competition avec 24 équipes.                                             
  `>>> make M32` pour une competition avec 32 équipes.                                                
@@ -70,9 +68,8 @@ Ouvrir le fichier index.html puis pacourir tous les fichiers.
 ## Element de code:
   Mise en pratique des principes SOLID, notamment l'open closed principle sur les types de compétitions et les types de match. Mise en pratique du TDD (Test Drive Development).  Mise en pratique pour la 3ème version du projet, le design pattern strategy
 
+## Difficultés rencontrées:
+  le fait de rejouer les équipes qualifiées en demi-finale et en finale.
 
-## Difficultés rencontrées :
- Nous avons réussi le test de addObserver
- parcontre pour rateUpdateTest,competitorRateTest, looserTest nous avons eu des difficultés car il fallait faire le test de l'interface CompetitionObserver, faire le test d'une interface nous a semblé bizare.
 ## Diagramme UML :
 ![Screenshot](../version_3/uml/diagramme.png)
