@@ -100,13 +100,12 @@ public class Master  extends Competition {
 		  System.out.println("        Les Matchs");
 		  System.out.println("------------------------");
 		  System.out.println("        1/4 finales");
-		  System.out.println(" ");
+		  System.out.println();
 		  for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) {
 		  competitorList = entry.getValue();
 		  tournament = new Tournament(competitorList);
 		  tournament.play(competitorList);
-		  this.watchPoule(competitorList);
-          System.out.println("----------------------");
+          
 		  
 		  } 
 		
@@ -117,14 +116,17 @@ public class Master  extends Competition {
 		  System.out.println(" ");
 		  for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) {
 		  competitorList = entry.getValue();
-		  //this.selectTeamMethod.selectTeamForPhaseTwo(competitorList,this.competitorsForPhaseTwo); 
+		  
 		  tournament = new Tournament(competitorList);
 		  tournament.play(competitorList); }
 		  
-		  System.out.println(" "); System.out.println("------------------------");
-		  System.out.println("         finale"); for(Entry<Integer, List<Competitor>>
-		  entry : this.groupStage.entrySet()) { competitorList = entry.getValue();
-		  tournament = new Tournament(competitorList); tournament.play(competitorList);
+		  System.out.println(" "); 
+		  System.out.println("------------------------");
+		  System.out.println("         finale"); 
+		  for(Entry<Integer, List<Competitor>> entry : this.groupStage.entrySet()) { 
+		  competitorList = entry.getValue();
+		  tournament = new Tournament(competitorList); 
+		  tournament.play(competitorList);
 		  
 		  }
 		 
@@ -133,23 +135,6 @@ public class Master  extends Competition {
  }
       
 
-	/**
-     * final phase
-     * @throws ListSizeIsNotPowerOfTwoException
-     * @throws EmptyCompetitorListException
-     */
-	
-	/*
-	 * private void finaleStage() throws ListSizeIsNotPowerOfTwoException,
-	 * EmptyCompetitorListException {
-	 * System.out.println("===================================");
-	 * this.speaker("finale"); Tournament tournament = new
-	 * Tournament(competitorList);
-	 * //this.resetCompetitorsPoint(this.competitorsForPhaseTwo);
-	 * tournament.play(competitorList); //
-	 * classification(this.competitorsForPhaseTwo); }
-	 */
-	 
 
 
     
@@ -165,8 +150,6 @@ public class Master  extends Competition {
         try{
             this.groupStage();
             
-            //this.finaleStage();
-           
 
         }catch (NumberOfCompetitorsNotAchievedException e){
             e.printStackTrace();

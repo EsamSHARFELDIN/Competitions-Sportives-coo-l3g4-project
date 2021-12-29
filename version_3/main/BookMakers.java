@@ -98,8 +98,7 @@ public class BookMakers implements CompetitionObserver{
     		}
     		else System.out.println("         "+c.getPseudo());
     	}
-    }
-	 
+    }	 
 	public void displayTeam(List<Competitor> competitorList) {
 		for (Competitor c:competitorList) {
     		if (competitorRate(c)==1 ) {
@@ -114,20 +113,6 @@ public class BookMakers implements CompetitionObserver{
 	@Override
 	public void watchTeam(List<Competitor> competitorList) {
 		this.displayTeam(competitorList);
-		
-	}
-	public List<Competitor> competitorList() {
-		List<Competitor> competitorList = null;
-		for (Competitor c:competitorList) {
-    		if (competitorRate(c)==1 ) {
-    			System.out.println("         "+c.getPseudo());
-    		}
-    		else if (competitorRate(c)==2 ) {
-    			System.out.println("         "+c.getPseudo() );
-    		}
-    		else;
-	}
-		return competitorList;
 		
 	}
 }
